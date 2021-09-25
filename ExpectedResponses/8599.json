@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "foo.net.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20075",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.net.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.net.com. 500 IN NS net.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 22286",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.net.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.net.com. 500 IN NS net.com.",
+          ";ADDITIONAL",
+          "net.com. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

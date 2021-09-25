@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "com.bank.net.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60694",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.bank.net.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.bank.net.com. 500 IN NS bank.net.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 8778",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.bank.net.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.bank.net.com. 500 IN NS bank.net.com.",
+          ";ADDITIONAL",
+          "bank.net.com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

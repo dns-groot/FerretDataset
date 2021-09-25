@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.example.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 27074",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.example.com.com. IN NS",
+          ";ANSWER",
+          "com.com. 500 IN DNAME mybankcard.com.",
+          "bankcard.example.com.com. 500 IN CNAME bankcard.example.mybankcard.com.",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 604800 86400 2419200 604800",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

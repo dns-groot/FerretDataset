@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "bank.foo.example.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 39385",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.foo.example.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.example.www. 500 IN NS fnni.foo.example.www.",
+          "foo.example.www. 500 IN NS www.",
+          ";ADDITIONAL",
+          "fnni.foo.example.www. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13510",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME campus.www.",
+          "bankcard.www. 500 IN CNAME bankcard.campus.www.",
+          "bankcard.campus.www. 500 IN CNAME bankcard.campus.campus.www.",
+          "bankcard.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.www.",
+          "bankcard.campus.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.campus.www.",
+          "bankcard.campus.campus.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.campus.campus.www.",
+          "bankcard.campus.campus.campus.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.campus.campus.campus.www.",
+          "bankcard.campus.campus.campus.campus.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.campus.campus.campus.campus.www.",
+          "bankcard.campus.campus.campus.campus.campus.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.campus.campus.campus.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 31313",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME campus.www.",
+          "bankcard.www. 500 IN CNAME bankcard.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 47673",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME campus.www.",
+          "bankcard.www. 500 IN CNAME bankcard.campus.www.",
+          "bankcard.campus.www. 500 IN CNAME bankcard.campus.campus.www.",
+          "bankcard.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.www.",
+          "bankcard.campus.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.campus.www.",
+          "bankcard.campus.campus.campus.campus.www. 500 IN CNAME bankcard.campus.campus.campus.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 45483",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

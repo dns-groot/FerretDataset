@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "example.uni.*.campus.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 57458",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.uni.*.campus. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.uni.*.campus. 500 IN NS example.uni.*.campus.",
+          "example.uni.*.campus. 500 IN NS com.*.campus.",
+          ";ADDITIONAL",
+          "example.uni.*.campus. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

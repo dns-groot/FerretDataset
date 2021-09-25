@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "example.net.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 10306",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.net.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.net.net. 500 IN NS bank.example.www.net.",
+          "example.net.net. 500 IN NS bank.example.net.net.",
+          ";ADDITIONAL",
+          "bank.example.net.net. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

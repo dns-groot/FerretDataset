@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "foo.bank.campus.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45710",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.bank.campus.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.bank.campus.com. 500 IN NS campus.bank.campus.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 58223",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.bank.campus.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.bank.campus.com. 500 IN NS campus.bank.campus.com.",
+          ";ADDITIONAL",
+          "campus.bank.campus.com. 500 IN A 1.1.1.1",
+          "campus.bank.campus.com. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

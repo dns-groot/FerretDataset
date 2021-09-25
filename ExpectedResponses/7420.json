@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "com.foo.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51870",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.foo.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.foo.bank. 500 IN NS foo.bank.",
+          "com.foo.bank. 500 IN NS bank.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 53198",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.foo.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.foo.bank. 500 IN NS bank.",
+          "com.foo.bank. 500 IN NS foo.bank.",
+          ";ADDITIONAL",
+          "foo.bank. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

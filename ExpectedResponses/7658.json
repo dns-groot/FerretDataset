@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bar.net.fnni.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40183",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.net.fnni.uni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.net.fnni.uni. 500 IN NS www.uni.",
+          "bar.net.fnni.uni. 500 IN NS net.fnni.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 51681",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.net.fnni.uni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.net.fnni.uni. 500 IN NS www.uni.",
+          "bar.net.fnni.uni. 500 IN NS net.fnni.uni.",
+          ";ADDITIONAL",
+          "net.fnni.uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

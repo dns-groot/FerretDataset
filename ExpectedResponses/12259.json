@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "email.www.uni.bar.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64078",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.www.uni.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.www.uni.bar. 500 IN NS campus.www.uni.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 59490",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.www.uni.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.www.uni.bar. 500 IN NS campus.www.uni.bar.",
+          ";ADDITIONAL",
+          "campus.www.uni.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

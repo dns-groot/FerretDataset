@@ -1,0 +1,26 @@
+[
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 22637",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN SOA",
+          ";ANSWER",
+          "bar.foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 604800 86400 2419200 604800",
+          ";AUTHORITY",
+          "bar.foo. 500 IN NS fnni.bank.foo.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

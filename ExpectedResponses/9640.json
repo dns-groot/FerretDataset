@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "uni.bar.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37686",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.bar.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.bar.net. 500 IN NS bar.net.",
+          "uni.bar.net. 500 IN NS net.*.email.bank.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 65307",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.bar.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.bar.net. 500 IN NS net.*.email.bank.",
+          "uni.bar.net. 500 IN NS bar.net.",
+          ";ADDITIONAL",
+          "bar.net. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

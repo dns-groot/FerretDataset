@@ -1,0 +1,26 @@
+[
+  {
+    "Query": {
+      "Name": "foo.example.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 52182",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.example.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.example.example. 500 IN NS email.foo.example.example.",
+          ";ADDITIONAL",
+          "email.foo.example.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "campus.net.email.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 43329",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.net.email.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.net.email.bar. 500 IN NS www.email.bar.",
+          "campus.net.email.bar. 500 IN NS net.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 55874",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.net.email.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.net.email.bar. 500 IN NS www.email.bar.",
+          "campus.net.email.bar. 500 IN NS net.email.bar.",
+          ";ADDITIONAL",
+          "net.email.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

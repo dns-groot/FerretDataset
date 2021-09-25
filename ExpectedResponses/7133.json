@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.foo.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 32140",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.foo.example. IN SOA",
+          ";ANSWER",
+          "bankcard.foo.example. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 604800 86400 2419200 604800",
+          ";AUTHORITY",
+          "bankcard.foo.example. 500 IN NS bank.campus.foo.example.",
+          "bankcard.foo.example. 500 IN NS campus.foo.example.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

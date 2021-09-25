@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bank.com.bar.campus.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49201",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.com.bar.campus. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.com.bar.campus. 500 IN NS fnni.com.bar.campus.",
+          "bank.com.bar.campus. 500 IN NS campus.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 43422",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.com.bar.campus. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.com.bar.campus. 500 IN NS campus.",
+          "bank.com.bar.campus. 500 IN NS fnni.com.bar.campus.",
+          ";ADDITIONAL",
+          "fnni.com.bar.campus. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

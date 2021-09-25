@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "example.www.bank.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7895",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.www.bank.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.www.bank.com. 500 IN NS www.www.bank.com.",
+          "example.www.bank.com. 500 IN NS com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 814",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.www.bank.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.www.bank.com. 500 IN NS com.",
+          "example.www.bank.com. 500 IN NS www.www.bank.com.",
+          ";ADDITIONAL",
+          "www.www.bank.com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "foo.com.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 57485",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.com.email. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.com.email. 500 IN NS net.foo.com.email.",
+          "foo.com.email. 500 IN NS email.",
+          ";ADDITIONAL",
+          "net.foo.com.email. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

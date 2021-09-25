@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "uni.fnni.campus.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11775",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.fnni.campus.email. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.fnni.campus.email. 500 IN NS campus.email.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 53869",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.fnni.campus.email. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.fnni.campus.email. 500 IN NS campus.email.",
+          ";ADDITIONAL",
+          "campus.email. 500 IN A 2.2.2.2"
+        ]
+      }
+    ]
+  }
+]

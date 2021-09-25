@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "uni.uni.bank.campus.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49028",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.uni.bank.campus. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.uni.bank.campus. 500 IN NS uni.bank.campus.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 57802",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.uni.bank.campus. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.uni.bank.campus. 500 IN NS uni.bank.campus.",
+          ";ADDITIONAL",
+          "uni.bank.campus. 500 IN A 1.1.1.1",
+          "uni.bank.campus. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

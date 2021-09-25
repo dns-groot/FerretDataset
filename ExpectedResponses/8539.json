@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "example.uni.campus.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58986",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.uni.campus. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.uni.campus. 500 IN NS uni.campus.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 58843",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.uni.campus. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.uni.campus. 500 IN NS uni.campus.",
+          ";ADDITIONAL",
+          "uni.campus. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

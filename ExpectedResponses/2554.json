@@ -1,0 +1,26 @@
+[
+  {
+    "Query": {
+      "Name": "*.fnni.example.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 20810",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.fnni.example.com. IN NS",
+          ";ANSWER",
+          "fnni.example.com. 500 IN DNAME foo.com.",
+          "*.fnni.example.com. 500 IN CNAME *.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

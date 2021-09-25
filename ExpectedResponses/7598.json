@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "email.foo.email.bankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 4312",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.foo.email.bankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.email.bankcard. 500 IN NS bankcard.",
+          "foo.email.bankcard. 500 IN NS *.foo.email.bankcard.",
+          ";ADDITIONAL",
+          "*.foo.email.bankcard. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

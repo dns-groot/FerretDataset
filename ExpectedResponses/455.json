@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "example.www.email.campus.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38077",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.www.email.campus. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.email.campus. 500 IN NS net.campus.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 42041",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.www.email.campus. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.email.campus. 500 IN NS net.campus.",
+          ";ADDITIONAL",
+          "net.campus. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

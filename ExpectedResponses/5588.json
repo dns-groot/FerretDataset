@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "com.uni.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13889",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.uni. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.uni. 500 IN NS uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 18989",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.uni. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.uni. 500 IN NS uni.",
+          ";ADDITIONAL",
+          "uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

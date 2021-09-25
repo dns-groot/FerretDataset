@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.campus.uni.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47929",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.campus.uni.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.campus.uni.fnni. 500 IN NS campus.uni.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 8107",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.campus.uni.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.campus.uni.fnni. 500 IN NS campus.uni.fnni.",
+          ";ADDITIONAL",
+          "campus.uni.fnni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

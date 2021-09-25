@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "campus.campus.email.bankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42530",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.campus.email.bankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.campus.email.bankcard. 500 IN NS campus.email.bankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 13729",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.campus.email.bankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.campus.email.bankcard. 500 IN NS campus.email.bankcard.",
+          ";ADDITIONAL",
+          "campus.email.bankcard. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

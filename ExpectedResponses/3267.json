@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bank.com.*.foo.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36311",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.com.*.foo. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.com.*.foo. 500 IN NS example.*.*.foo.",
+          "bank.com.*.foo. 500 IN NS example.com.*.foo.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 64177",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.com.*.foo. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.com.*.foo. 500 IN NS example.com.*.foo.",
+          "bank.com.*.foo. 500 IN NS example.*.*.foo.",
+          ";ADDITIONAL",
+          "example.com.*.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

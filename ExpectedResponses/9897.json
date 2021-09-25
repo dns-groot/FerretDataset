@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "mybankcard.bar.bankcard.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32736",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "mybankcard.bar.bankcard.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.bar.bankcard.example. 500 IN NS email.bar.bankcard.example.",
+          "mybankcard.bar.bankcard.example. 500 IN NS bar.email.example.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 14150",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "mybankcard.bar.bankcard.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.bar.bankcard.example. 500 IN NS bar.email.example.",
+          "mybankcard.bar.bankcard.example. 500 IN NS email.bar.bankcard.example.",
+          ";ADDITIONAL",
+          "email.bar.bankcard.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

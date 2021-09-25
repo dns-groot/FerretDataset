@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "email.bar.bar.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42513",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.bar.bar.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.bar.bar.net. 500 IN NS net.bar.bar.net.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 33907",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.bar.bar.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.bar.bar.net. 500 IN NS net.bar.bar.net.",
+          ";ADDITIONAL",
+          "net.bar.bar.net. 500 IN A 1.1.1.1",
+          "net.bar.bar.net. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

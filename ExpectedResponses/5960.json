@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "bank.bar.uni.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40278",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bar.uni.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.bar.uni.com. 500 IN NS net.bar.uni.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 4924",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bar.uni.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.bar.uni.com. 500 IN NS net.bar.uni.com.",
+          ";ADDITIONAL",
+          "net.bar.uni.com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

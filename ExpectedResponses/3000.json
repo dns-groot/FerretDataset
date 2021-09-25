@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bank.bank.fnni.bankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16146",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bank.fnni.bankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.fnni.bankcard. 500 IN NS fnni.bankcard.",
+          "bank.fnni.bankcard. 500 IN NS email.bank.fnni.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 46664",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bank.fnni.bankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.fnni.bankcard. 500 IN NS email.bank.fnni.com.",
+          "bank.fnni.bankcard. 500 IN NS fnni.bankcard.",
+          ";ADDITIONAL",
+          "fnni.bankcard. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

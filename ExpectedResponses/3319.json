@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.com.campus.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29822",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.com.campus.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.com.campus.example. 500 IN NS fnni.campus.email.",
+          "fnni.com.campus.example. 500 IN NS mybankcard.com.campus.example.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 12003",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.com.campus.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.com.campus.example. 500 IN NS fnni.campus.email.",
+          "fnni.com.campus.example. 500 IN NS mybankcard.com.campus.example.",
+          ";ADDITIONAL",
+          "mybankcard.com.campus.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.campus.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37984",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bankcard.campus.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.uni. 500 IN NS www.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 33812",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bankcard.campus.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.uni. 500 IN NS www.uni.",
+          ";ADDITIONAL",
+          "www.uni. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

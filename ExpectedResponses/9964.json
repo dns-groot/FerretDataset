@@ -1,0 +1,57 @@
+[
+  {
+    "Query": {
+      "Name": "example.foo.email.uni.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18061",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.foo.email.uni. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.foo.email.uni. 500 IN NS foo.foo.email.uni.",
+          "example.foo.email.uni. 500 IN NS foo.example.campus.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 34294",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.foo.email.uni. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.foo.email.uni. 500 IN NS foo.example.campus.uni.",
+          "example.foo.email.uni. 500 IN NS foo.foo.email.uni.",
+          ";ADDITIONAL",
+          "foo.foo.email.uni. 500 IN A 1.1.1.1"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 1681",
+          "opcode QUERY",
+          "rcode REFUSED",
+          "flags QR",
+          ";QUESTION",
+          "example.foo.email.uni. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

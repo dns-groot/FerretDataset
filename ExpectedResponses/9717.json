@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "example.www.www.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8841",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.www.www. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.www.www. 500 IN NS www.www.",
+          "example.www.www. 500 IN NS campus.email.bankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 27135",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.www.www. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.www.www. 500 IN NS campus.email.bankcard.",
+          "example.www.www. 500 IN NS www.www.",
+          ";ADDITIONAL",
+          "www.www. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

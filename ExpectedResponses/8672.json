@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "net.www.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14852",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.www.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.www.bank. 500 IN NS www.bank.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 3886",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.www.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.www.bank. 500 IN NS www.bank.",
+          ";ADDITIONAL",
+          "www.bank. 500 IN A 2.2.2.2"
+        ]
+      }
+    ]
+  }
+]

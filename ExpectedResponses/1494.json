@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "www.bar.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51245",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.bar.uni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.uni. 500 IN NS *.www.bar.bar.",
+          "bar.uni. 500 IN NS uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 45428",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.bar.uni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.uni. 500 IN NS *.www.bar.bar.",
+          "bar.uni. 500 IN NS uni.",
+          ";ADDITIONAL",
+          "uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

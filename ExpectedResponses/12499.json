@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "campus.fnni.example.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11058",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.fnni.example.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.fnni.example.uni. 500 IN NS fnni.example.uni.",
+          "campus.fnni.example.uni. 500 IN NS fnni.bar.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 9934",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.fnni.example.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.fnni.example.uni. 500 IN NS fnni.example.uni.",
+          "campus.fnni.example.uni. 500 IN NS fnni.bar.uni.",
+          ";ADDITIONAL",
+          "fnni.example.uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

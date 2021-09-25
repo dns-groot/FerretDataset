@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "bank.bar.www.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62146",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bar.www.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.bar.www.www. 500 IN NS www.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 44060",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bar.www.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.bar.www.www. 500 IN NS www.www.",
+          ";ADDITIONAL",
+          "www.www. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

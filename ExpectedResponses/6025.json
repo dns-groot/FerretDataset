@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "net.com.com.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34949",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.com.com.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.com.com.www. 500 IN NS com.com.com.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 5269",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.com.com.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.com.com.www. 500 IN NS com.com.com.www.",
+          ";ADDITIONAL",
+          "com.com.com.www. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

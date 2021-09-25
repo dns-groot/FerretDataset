@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "www.uni.com.com.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1064",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.uni.com.com. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.uni.com.com. 500 IN NS *.uni.com.com.",
+          "www.uni.com.com. 500 IN NS campus.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 33186",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.uni.com.com. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.uni.com.com. 500 IN NS campus.fnni.",
+          "www.uni.com.com. 500 IN NS *.uni.com.com.",
+          ";ADDITIONAL",
+          "*.uni.com.com. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

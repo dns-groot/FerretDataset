@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bar.net.www.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10345",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.net.www.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.net.www.net. 500 IN NS net.www.net.",
+          "bar.net.www.net. 500 IN NS bar.net.bar.net.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 65248",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.net.www.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.net.www.net. 500 IN NS bar.net.bar.net.",
+          "bar.net.www.net. 500 IN NS net.www.net.",
+          ";ADDITIONAL",
+          "net.www.net. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

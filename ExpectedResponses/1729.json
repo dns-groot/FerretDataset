@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "example.mybankcard.bar.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 531",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.mybankcard.bar.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.mybankcard.bar.mybankcard. 500 IN NS bar.mybankcard.",
+          "example.mybankcard.bar.mybankcard. 500 IN NS mybankcard.bar.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 3634",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.mybankcard.bar.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.mybankcard.bar.mybankcard. 500 IN NS mybankcard.bar.mybankcard.",
+          "example.mybankcard.bar.mybankcard. 500 IN NS bar.mybankcard.",
+          ";ADDITIONAL",
+          "mybankcard.bar.mybankcard. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

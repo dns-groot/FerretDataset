@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "bar.www.campus.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 8802",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.www.campus.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.campus.foo. 500 IN NS mybankcard.foo.",
+          "www.campus.foo. 500 IN NS foo.www.campus.foo.",
+          ";ADDITIONAL",
+          "foo.www.campus.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

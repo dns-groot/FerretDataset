@@ -1,0 +1,26 @@
+[
+  {
+    "Query": {
+      "Name": "example.bar.net.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 282",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.bar.net.example. IN SOA",
+          ";ANSWER",
+          "example.bar.net.example. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 604800 86400 2419200 604800",
+          ";AUTHORITY",
+          "example.bar.net.example. 500 IN NS net.bank.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

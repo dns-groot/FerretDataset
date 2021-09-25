@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "foo.*.campus.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 57866",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.*.campus.bar. IN NS",
+          ";ANSWER",
+          "foo.*.campus.bar. 500 IN NS *.*.campus.bar.",
+          "foo.*.campus.bar. 500 IN NS foo.*.example.bar.",
+          "foo.*.campus.bar. 500 IN NS foo.bankcard.campus.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

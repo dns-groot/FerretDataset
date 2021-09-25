@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bar.bar.net.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51103",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.bar.net.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.bar.net.bank. 500 IN NS net.bank.",
+          "bar.bar.net.bank. 500 IN NS www.bar.net.bank.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 7217",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.bar.net.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.bar.net.bank. 500 IN NS www.bar.net.bank.",
+          "bar.bar.net.bank. 500 IN NS net.bank.",
+          ";ADDITIONAL",
+          "www.bar.net.bank. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

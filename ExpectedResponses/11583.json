@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "net.uni.example.bank.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30947",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.uni.example.bank. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.uni.example.bank. 500 IN NS bar.uni.example.bank.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 62036",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.uni.example.bank. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.uni.example.bank. 500 IN NS bar.uni.example.bank.",
+          ";ADDITIONAL",
+          "bar.uni.example.bank. 500 IN A 1.1.1.1",
+          "bar.uni.example.bank. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

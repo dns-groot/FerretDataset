@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "example.email.uni.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16794",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.email.uni.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.uni.bar. 500 IN NS uni.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 47436",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.email.uni.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.uni.bar. 500 IN NS uni.bar.",
+          ";ADDITIONAL",
+          "uni.bar. 500 IN AAAA 2001:db8:85a3::8a2e:370:7334"
+        ]
+      }
+    ]
+  }
+]

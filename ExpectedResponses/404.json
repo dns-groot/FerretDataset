@@ -1,0 +1,26 @@
+[
+  {
+    "Query": {
+      "Name": "net.mybankcard.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 63157",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.mybankcard.foo. IN CNAME",
+          ";ANSWER",
+          "net.mybankcard.foo. 500 IN CNAME example.foo.",
+          ";AUTHORITY",
+          "mybankcard.foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

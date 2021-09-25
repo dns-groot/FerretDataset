@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "foo.campus.bank.*.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40098",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.campus.bank.*. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.campus.bank.*. 500 IN NS uni.campus.bank.*.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 53672",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.campus.bank.*. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.campus.bank.*. 500 IN NS uni.campus.bank.*.",
+          ";ADDITIONAL",
+          "uni.campus.bank.*. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

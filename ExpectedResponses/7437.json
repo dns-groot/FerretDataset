@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "net.foo.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 48342",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.foo.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.foo.uni. 500 IN NS net.bank.uni.",
+          "net.foo.uni. 500 IN NS net.foo.uni.",
+          ";ADDITIONAL",
+          "net.foo.uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

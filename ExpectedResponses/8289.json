@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "foo.uni.bankcard.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 22070",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.uni.bankcard.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.uni.bankcard.bar. 500 IN NS uni.bankcard.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 42740",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.uni.bankcard.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.uni.bankcard.bar. 500 IN NS uni.bankcard.bar.",
+          ";ADDITIONAL",
+          "uni.bankcard.bar. 500 IN AAAA 2001:db8:85a3::8a2e:370:7334"
+        ]
+      }
+    ]
+  }
+]

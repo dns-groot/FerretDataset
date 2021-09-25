@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "mybankcard.uni.uni.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 50294",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "mybankcard.uni.uni.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.uni.uni.uni. 500 IN NS uni.uni.uni.",
+          "mybankcard.uni.uni.uni. 500 IN NS fnni.bankcard.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 8225",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "mybankcard.uni.uni.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.uni.uni.uni. 500 IN NS fnni.bankcard.www.",
+          "mybankcard.uni.uni.uni. 500 IN NS uni.uni.uni.",
+          ";ADDITIONAL",
+          "uni.uni.uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

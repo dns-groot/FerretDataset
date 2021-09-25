@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "foo.example.email.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8716",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.example.email.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.email.foo. 500 IN NS com.email.foo.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 60610",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.example.email.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.email.foo. 500 IN NS com.email.foo.",
+          ";ADDITIONAL",
+          "com.email.foo. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

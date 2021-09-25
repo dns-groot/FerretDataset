@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "foo.net.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 16597",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.net.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.net.example. 500 IN NS campus.example.",
+          "foo.net.example. 500 IN NS fnni.foo.net.example.",
+          ";ADDITIONAL",
+          "fnni.foo.net.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

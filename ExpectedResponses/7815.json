@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "uni.net.email.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7176",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.net.email.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.net.email.com. 500 IN NS bank.net.email.com.",
+          "uni.net.email.com. 500 IN NS bank.bankcard.email.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 26219",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.net.email.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.net.email.com. 500 IN NS bank.net.email.com.",
+          "uni.net.email.com. 500 IN NS bank.bankcard.email.com.",
+          ";ADDITIONAL",
+          "bank.net.email.com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

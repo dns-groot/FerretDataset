@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bar.com.email.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19532",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.com.email.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.com.email.example. 500 IN NS bankcard.com.email.example.",
+          "bar.com.email.example. 500 IN NS bank.*.email.example.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 30918",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.com.email.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.com.email.example. 500 IN NS bank.*.email.example.",
+          "bar.com.email.example. 500 IN NS bankcard.com.email.example.",
+          ";ADDITIONAL",
+          "bankcard.com.email.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

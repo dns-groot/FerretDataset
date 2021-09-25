@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "example.bar.www.bankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58117",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.bar.www.bankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.bar.www.bankcard. 500 IN NS *.bar.www.bankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 53115",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.bar.www.bankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.bar.www.bankcard. 500 IN NS *.bar.www.bankcard.",
+          ";ADDITIONAL",
+          "*.bar.www.bankcard. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

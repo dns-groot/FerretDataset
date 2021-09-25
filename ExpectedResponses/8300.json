@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "campus.foo.fnni.bankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62831",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.foo.fnni.bankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.foo.fnni.bankcard. 500 IN NS foo.fnni.bankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 41801",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.foo.fnni.bankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.foo.fnni.bankcard. 500 IN NS foo.fnni.bankcard.",
+          ";ADDITIONAL",
+          "foo.fnni.bankcard. 500 IN A 1.1.1.1",
+          "foo.fnni.bankcard. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "bank.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5846",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.uni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.uni. 500 IN NS email.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 7931",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.uni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.uni. 500 IN NS email.uni.",
+          ";ADDITIONAL",
+          "email.uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

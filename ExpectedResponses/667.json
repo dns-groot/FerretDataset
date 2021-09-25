@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "bar.www.uni.www.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 29482",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.www.uni.www. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.www. 500 IN NS uni.fnni.example.example.",
+          "uni.www. 500 IN NS bankcard.uni.www.",
+          ";ADDITIONAL",
+          "bankcard.uni.www. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "example.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 53245",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.com. 500 IN NS uni.",
+          "example.com. 500 IN NS example.example.com.",
+          ";ADDITIONAL",
+          "example.example.com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "bank.bank.bar.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 44260",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bank.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.bank.bar. 500 IN NS net.bank.bank.bar.",
+          "bank.bank.bar. 500 IN NS foo.",
+          ";ADDITIONAL",
+          "net.bank.bank.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

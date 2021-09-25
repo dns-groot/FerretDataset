@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "email.net.mybankcard.*.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12002",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.net.mybankcard.*. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.net.mybankcard.*. 500 IN NS mybankcard.*.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 40365",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.net.mybankcard.*. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.net.mybankcard.*. 500 IN NS mybankcard.*.",
+          ";ADDITIONAL",
+          "mybankcard.*. 500 IN AAAA 2001:db8:85a3::8a2e:370:7334"
+        ]
+      }
+    ]
+  }
+]

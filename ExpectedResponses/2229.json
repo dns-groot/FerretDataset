@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "example.foo.uni.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10605",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.foo.uni.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.uni.bar. 500 IN NS uni.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 10089",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.foo.uni.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.uni.bar. 500 IN NS uni.bar.",
+          ";ADDITIONAL",
+          "uni.bar. 500 IN AAAA 2001:db8:85a3::8a2e:370:7334"
+        ]
+      }
+    ]
+  }
+]

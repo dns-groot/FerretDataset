@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "foo.uni.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13393",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.uni.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.uni.www. 500 IN NS www.",
+          "foo.uni.www. 500 IN NS uni.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 57569",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.uni.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.uni.www. 500 IN NS uni.www.",
+          "foo.uni.www. 500 IN NS www.",
+          ";ADDITIONAL",
+          "uni.www. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

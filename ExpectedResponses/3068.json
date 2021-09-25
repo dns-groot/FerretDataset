@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "uni.net.net.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 17565",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.net.net.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.net.example. 500 IN NS *.net.net.example.",
+          "net.net.example. 500 IN NS uni.foo.net.bankcard.",
+          ";ADDITIONAL",
+          "*.net.net.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

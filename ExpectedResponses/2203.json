@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "bank.campus.*.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60779",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.campus.*.email. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.*.email. 500 IN NS email.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 51301",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.campus.*.email. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.*.email. 500 IN NS email.",
+          ";ADDITIONAL",
+          "email. 500 IN AAAA 2001:db8:85a3::8a2e:370:7334"
+        ]
+      }
+    ]
+  }
+]

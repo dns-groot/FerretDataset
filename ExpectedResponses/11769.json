@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "campus.com.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 24949",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.com.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.com.example. 500 IN NS bar.example.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 53933",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.com.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.com.example. 500 IN NS bar.example.",
+          ";ADDITIONAL",
+          "bar.example. 500 IN A 2.2.2.2"
+        ]
+      }
+    ]
+  }
+]

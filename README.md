@@ -1,1 +1,3 @@
 # FerretDataset
+
+The expected responses were created using the responses from [Bind](https://gitlab.isc.org/isc-projects/bind9/-/tree/eeec53eb5da5c0968e099f01c6236127f9813a97), [Knot](https://gitlab.nic.cz/knot/knot-dns/-/tree/41d8c938bc0ca70d4fc19ab01e72a8fd39b6c1cc), [Nsd](https://github.com/NLnetLabs/nsd/tree/019f683093fd94aaf8fee58bb1297c82eea887cc), and [PowerDNS](https://github.com/PowerDNS/pdns/tree/57ec75fc8a217ae01de314e17333e11d9dd16772). Each implementation link points to the code base at which it was cloned for response generation.

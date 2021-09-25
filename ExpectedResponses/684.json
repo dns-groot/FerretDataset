@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bank.bar.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2435",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bar.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.example. 500 IN NS foo.example.",
+          "bar.example. 500 IN NS fnni.net.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 64689",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.bar.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.example. 500 IN NS foo.example.",
+          "bar.example. 500 IN NS fnni.net.",
+          ";ADDITIONAL",
+          "foo.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

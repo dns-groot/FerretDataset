@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.www.bankcard.fnni.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40540",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bankcard.www.bankcard.fnni. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.www.bankcard.fnni. 500 IN NS foo.www.bankcard.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 44076",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bankcard.www.bankcard.fnni. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.www.bankcard.fnni. 500 IN NS foo.www.bankcard.fnni.",
+          ";ADDITIONAL",
+          "foo.www.bankcard.fnni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

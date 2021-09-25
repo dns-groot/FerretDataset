@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "campus.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 23179",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.example. 500 IN NS example.campus.example.",
+          "campus.example. 500 IN NS bar.example.campus.bankcard.",
+          ";ADDITIONAL",
+          "example.campus.example. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

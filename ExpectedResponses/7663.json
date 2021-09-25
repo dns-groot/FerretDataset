@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "com.uni.campus.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38872",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.uni.campus.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.uni.campus.net. 500 IN NS uni.campus.net.",
+          "com.uni.campus.net. 500 IN NS bar.campus.net.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 64292",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.uni.campus.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.uni.campus.net. 500 IN NS bar.campus.net.",
+          "com.uni.campus.net. 500 IN NS uni.campus.net.",
+          ";ADDITIONAL",
+          "uni.campus.net. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

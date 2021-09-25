@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.foo.bar.bankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 34619",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bankcard.foo.bar.bankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.foo.bar.bankcard. 500 IN NS bankcard.foo.bar.bankcard.",
+          "bankcard.foo.bar.bankcard. 500 IN NS foo.bankcard.",
+          ";ADDITIONAL",
+          "bankcard.foo.bar.bankcard. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "bar.bar.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34695",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.bar.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.bar.example. 500 IN NS bar.example.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 16405",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.bar.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.bar.example. 500 IN NS bar.example.",
+          ";ADDITIONAL",
+          "bar.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "com.net.bankcard.net.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 894",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.net.bankcard.net. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.bankcard.net. 500 IN NS net.",
+          "net.bankcard.net. 500 IN NS bankcard.net.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 19434",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.net.bankcard.net. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.bankcard.net. 500 IN NS net.",
+          "net.bankcard.net. 500 IN NS bankcard.net.",
+          ";ADDITIONAL",
+          "bankcard.net. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "campus.www.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2135",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.www.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.www. 500 IN NS foo.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 15232",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.www.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.www. 500 IN NS foo.www.",
+          ";ADDITIONAL",
+          "foo.www. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

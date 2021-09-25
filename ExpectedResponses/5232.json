@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "uni.com.example.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1660",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.com.example.fnni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.com.example.fnni. 500 IN NS fnni.",
+          "uni.com.example.fnni. 500 IN NS com.example.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 22827",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.com.example.fnni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.com.example.fnni. 500 IN NS com.example.fnni.",
+          "uni.com.example.fnni. 500 IN NS fnni.",
+          ";ADDITIONAL",
+          "com.example.fnni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

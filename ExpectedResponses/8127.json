@@ -1,0 +1,26 @@
+[
+  {
+    "Query": {
+      "Name": "www.foo.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 28941",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.foo.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.example. 500 IN NS foo.foo.example.",
+          ";ADDITIONAL",
+          "foo.foo.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

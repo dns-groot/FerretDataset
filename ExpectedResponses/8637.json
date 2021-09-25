@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "foo.www.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 30993",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.www.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.www.uni. 500 IN NS foo.www.uni.",
+          ";ADDITIONAL",
+          "foo.www.uni. 500 IN A 1.1.1.1",
+          "foo.www.uni. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

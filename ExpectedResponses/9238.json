@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "email.example.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 56307",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.example.uni. IN DNAME",
+          ";ANSWER",
+          "email.example.uni. 500 IN DNAME bankcard.example.campus.",
+          ";AUTHORITY",
+          "email.example.uni. 500 IN NS mybankcard.campus.example.fnni.",
+          "email.example.uni. 500 IN NS uni.uni.uni.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

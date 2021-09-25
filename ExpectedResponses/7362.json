@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "example.net.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19838",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.net.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.net.uni. 500 IN NS uni.",
+          "example.net.uni. 500 IN NS net.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 17453",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.net.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.net.uni. 500 IN NS uni.",
+          "example.net.uni. 500 IN NS net.uni.",
+          ";ADDITIONAL",
+          "net.uni. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]

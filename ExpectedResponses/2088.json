@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "uni.bank.campus.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13163",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.bank.campus. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.bank.campus. 500 IN NS campus.bar.bank.campus.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 10053",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.bank.campus. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.bank.campus. 500 IN NS campus.bar.bank.campus.",
+          ";ADDITIONAL",
+          "campus.bar.bank.campus. 500 IN A 2.2.2.2"
+        ]
+      }
+    ]
+  }
+]

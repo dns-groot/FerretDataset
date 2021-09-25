@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.net.net.bank.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 43959",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.net.net.bank. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.net.net.bank. 500 IN NS net.campus.bank.",
+          "fnni.net.net.bank. 500 IN NS net.net.bank.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 63173",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.net.net.bank. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.net.net.bank. 500 IN NS net.net.bank.",
+          "fnni.net.net.bank. 500 IN NS net.campus.bank.",
+          ";ADDITIONAL",
+          "net.net.bank. 500 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  }
+]

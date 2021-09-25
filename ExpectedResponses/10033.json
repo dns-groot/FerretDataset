@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "net.www.campus.campus.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10878",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.www.campus.campus. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.www.campus.campus. 500 IN NS *.www.campus.campus.",
+          "net.www.campus.campus. 500 IN NS fnni.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 54323",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.www.campus.campus. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.www.campus.campus. 500 IN NS fnni.fnni.",
+          "net.www.campus.campus. 500 IN NS *.www.campus.campus.",
+          ";ADDITIONAL",
+          "*.www.campus.campus. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ]
+  }
+]
