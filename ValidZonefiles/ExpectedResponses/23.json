@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "example.bank.foo.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 51564",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "example.bank.foo.www. IN NS",
+          ";ANSWER",
+          "foo.www. 500 IN DNAME example.fnni.*.www.",
+          "example.bank.foo.www. 500 IN CNAME example.bank.example.fnni.*.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 604800 86400 2419200 604800",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "D1"
+  }
+]

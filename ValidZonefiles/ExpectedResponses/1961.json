@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "bar.www.bankcard.campus.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30013",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.www.bankcard.campus. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.www.bankcard.campus. 500 IN NS www.bankcard.campus.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 23868",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.www.bankcard.campus. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.www.bankcard.campus. 500 IN NS www.bankcard.campus.",
+          ";ADDITIONAL",
+          "www.bankcard.campus. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

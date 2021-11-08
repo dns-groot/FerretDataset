@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "uni.campus.net.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23394",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.campus.net.uni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.net.uni. 500 IN NS email.www.*.",
+          "campus.net.uni. 500 IN NS net.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 40468",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.campus.net.uni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.net.uni. 500 IN NS email.www.*.",
+          "campus.net.uni. 500 IN NS net.uni.",
+          ";ADDITIONAL",
+          "net.uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

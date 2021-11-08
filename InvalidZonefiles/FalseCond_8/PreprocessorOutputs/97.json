@@ -1,0 +1,32 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "97.txt:2: using RFC1035 TTL semantics",
+      "zone net/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone net. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'bar.foo.bar.net|NS' in zone 'net' is occluded by a delegation at 'foo.bar.net'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: foo.bar.net IN NS bar.foo.net.campus",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.foo.bar.net IN NS bankcard",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: foo.net.net IN NS foo.net.bankcard",
+      "Checked 7 records of 'net', 3 errors, 1 warnings."
+    ]
+  }
+}

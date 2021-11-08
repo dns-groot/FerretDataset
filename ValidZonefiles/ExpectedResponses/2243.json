@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "*.email.example.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 51048",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "*.email.example.fnni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.example.fnni. 500 IN NS campus.email.example.fnni.",
+          ";ADDITIONAL",
+          "campus.email.example.fnni. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "uni.example.bank.bar.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd powerdns ",
+        "Response": [
+          "id 47785",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.example.bank.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.example.bank.bar. 500 IN NS uni.www.fnni.campus.",
+          "uni.example.bank.bar. 500 IN NS uni.example.bank.bar.",
+          ";ADDITIONAL",
+          "uni.example.bank.bar. 500 IN A 1.1.1.1"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 20133",
+          "opcode QUERY",
+          "rcode REFUSED",
+          "flags QR",
+          ";QUESTION",
+          "uni.example.bank.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

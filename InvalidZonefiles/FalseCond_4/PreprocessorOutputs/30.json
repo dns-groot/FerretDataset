@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "30.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 30.txt:2: mybankcard.foo: CNAME and other data",
+      "dns_master_load: 30.txt:5: mybankcard.foo: CNAME and other data",
+      "zone mybankcard.foo/IN: loading from master file 30.txt failed: CNAME and other data",
+      "zone mybankcard.foo/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone mybankcard.foo. file 30.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[mybankcard.foo.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME mybankcard.foo found, but other records with same label exist.",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: campus.mybankcard.foo IN NS campus.mybankcard.bar",
+      "Checked 5 records of 'mybankcard.foo', 2 errors, 0 warnings."
+    ]
+  }
+}

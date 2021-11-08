@@ -1,0 +1,2641 @@
+[
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62249",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN A",
+          ";ANSWER",
+          "bar.bar.net. 500 IN DNAME uni.",
+          "a.bar.bar.net. 500 IN CNAME a.uni.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8394",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN NS",
+          ";ANSWER",
+          "a.bar.bar.net. 500 IN CNAME a.uni.",
+          "bar.bar.net. 500 IN DNAME bar.foo.net.net.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8024",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN SOA",
+          ";ANSWER",
+          "a.bar.bar.net. 500 IN CNAME a.uni.",
+          "bar.bar.net. 500 IN DNAME bar.foo.net.net.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 34157",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN CNAME",
+          ";ANSWER",
+          "a.bar.bar.net. 500 IN CNAME a.bar.foo.net.net.",
+          "bar.bar.net. 500 IN DNAME uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 24703",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN DNAME",
+          ";ANSWER",
+          "bar.bar.net. 500 IN DNAME bar.foo.net.net.",
+          "a.bar.bar.net. 500 IN CNAME a.bar.foo.net.net.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 21670",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN TXT",
+          ";ANSWER",
+          "a.bar.bar.net. 500 IN CNAME a.bar.foo.net.net.",
+          "bar.bar.net. 500 IN DNAME uni.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bar.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 36484",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bar.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bar.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30068",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bar.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bar.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56172",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bar.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bar.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14245",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bar.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bar.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 49676",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bar.net. IN DNAME",
+          ";ANSWER",
+          "bar.bar.net. 500 IN DNAME bar.foo.net.net.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bar.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29343",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bar.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 24616",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN A",
+          ";ANSWER",
+          "bar.bar.net. 500 IN DNAME uni.",
+          "a.bar.bar.net. 500 IN CNAME a.uni.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59288",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN NS",
+          ";ANSWER",
+          "a.bar.bar.net. 500 IN CNAME a.uni.",
+          "bar.bar.net. 500 IN DNAME bar.foo.net.net.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8569",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN SOA",
+          ";ANSWER",
+          "a.bar.bar.net. 500 IN CNAME a.uni.",
+          "bar.bar.net. 500 IN DNAME bar.foo.net.net.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58956",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN CNAME",
+          ";ANSWER",
+          "a.bar.bar.net. 500 IN CNAME a.bar.foo.net.net.",
+          "bar.bar.net. 500 IN DNAME uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29449",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN DNAME",
+          ";ANSWER",
+          "bar.bar.net. 500 IN DNAME bar.foo.net.net.",
+          "a.bar.bar.net. 500 IN CNAME a.bar.foo.net.net.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bar.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20232",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bar.net. IN TXT",
+          ";ANSWER",
+          "a.bar.bar.net. 500 IN CNAME a.bar.foo.net.net.",
+          "bar.bar.net. 500 IN DNAME uni.",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9477",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16470",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10833",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59722",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3718",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 11301",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20650",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56715",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7780",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62128",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57059",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 42904",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.net.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26617",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo.net.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.net.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62281",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo.net.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.net.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6792",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo.net.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.net.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53068",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo.net.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.net.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20803",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo.net.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.net.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 23576",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo.net.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.net.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63156",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo.net.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.net.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7364",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo.net.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.net.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 24279",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo.net.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.net.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55555",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo.net.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.net.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10898",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo.net.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.net.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30776",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo.net.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.net.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 31069",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.net.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.net.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44778",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.net.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.net.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12545",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.net.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.net.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 49333",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.net.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.net.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56263",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.net.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.net.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 64529",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.net.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.net.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14375",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.net.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.net.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 41949",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.net.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.net.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 41578",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.net.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.net.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 42202",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.net.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.net.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10490",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.net.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.net.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10001",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.net.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 65096",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60712",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28266",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 19574",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29827",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30011",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 52129",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62805",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55864",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53906",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62530",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63922",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.campus.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60545",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.campus.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.campus.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33448",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.campus.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.campus.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39303",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.campus.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.campus.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 65079",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.campus.net. IN CNAME",
+          ";ANSWER",
+          "com.bar.campus.net. 500 IN CNAME com.bar.campus.net.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.campus.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57838",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.campus.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.campus.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 994",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.campus.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.campus.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 31089",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.campus.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.campus.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63093",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.campus.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.campus.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29083",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.campus.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.campus.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25903",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.campus.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.campus.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33506",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.campus.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.campus.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 40030",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.campus.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.campus.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 41724",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.campus.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.campus.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48475",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.campus.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.campus.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59987",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.campus.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.campus.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3681",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.campus.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.campus.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 61642",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.campus.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.campus.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20783",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.campus.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.campus.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55790",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.campus.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.campus.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 2793",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.campus.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.campus.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 40532",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.campus.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.campus.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63110",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.campus.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.campus.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 19048",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.campus.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.campus.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5672",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.campus.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30112",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 34892",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 47194",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57115",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26149",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6892",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29265",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53801",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 4743",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33684",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25519",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 21138",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 51885",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 32847",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net. IN NS",
+          ";ANSWER",
+          "net. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 36442",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net. IN SOA",
+          ";ANSWER",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26971",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 32388",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 521",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 49982",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58981",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 21071",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 32097",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62085",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7411",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

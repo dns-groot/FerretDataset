@@ -1,0 +1,1149 @@
+[
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 18884",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN A",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 45150",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN NS",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 41357",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN SOA",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 16305",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 32361",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63183",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN TXT",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36469",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN A",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25681",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN A",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49360",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN NS",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30084",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN NS",
+          ";ANSWER",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28373",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN SOA",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 50281",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN SOA",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21730",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62905",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36902",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7605",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55645",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN TXT",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5323",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN TXT",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.example.fnni.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32521",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN A",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "com.example.fnni.uni. 500 IN CNAME com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 4438",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.example.fnni.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11257",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN NS",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "com.example.fnni.uni. 500 IN CNAME com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20791",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.example.fnni.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25844",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN SOA",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "com.example.fnni.uni. 500 IN CNAME com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 42342",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.example.fnni.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52398",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "com.example.fnni.uni. 500 IN CNAME com.*.bankcard.uni.",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 64108",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.example.fnni.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21056",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "com.example.fnni.uni. 500 IN CNAME com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56917",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.example.fnni.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64546",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN TXT",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "com.example.fnni.uni. 500 IN CNAME com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57536",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.example.fnni.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44830",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN A",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 47189",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN A",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52007",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN NS",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 22757",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN NS",
+          ";ANSWER",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39391",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN SOA",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8462",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN SOA",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15596",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 34154",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64356",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18458",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.example.fnni.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47345",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN TXT",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55218",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.example.fnni.uni. IN TXT",
+          ";ANSWER",
+          "com.example.fnni.uni. 500 IN DNAME com.campus.bar.uni.",
+          "a.com.example.fnni.uni. 500 IN CNAME a.com.campus.bar.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 6221",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.uni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 14336",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.uni. IN NS",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 61122",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.uni. IN SOA",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 39445",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 45889",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 38204",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 30006",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN A",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 19761",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN NS",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 62154",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN SOA",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 58728",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN CNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          "example.fnni.uni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 20701",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN DNAME",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 48034",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.uni. IN TXT",
+          ";ANSWER",
+          "example.fnni.uni. 500 IN DNAME *.bankcard.uni.",
+          "a.example.fnni.uni. 500 IN CNAME a.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

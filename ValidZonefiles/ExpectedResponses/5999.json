@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "www.example.www.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44529",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.example.www.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.example.www.example. 500 IN NS www.example.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 28547",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.example.www.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.example.www.example. 500 IN NS www.example.",
+          ";ADDITIONAL",
+          "www.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

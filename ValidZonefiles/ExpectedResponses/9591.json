@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "bar.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 51410",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.example. 500 IN NS uni.",
+          "bar.example. 500 IN NS uni.bar.example.",
+          ";ADDITIONAL",
+          "uni.bar.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "campus.bar.bar.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19818",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.bar.bar.fnni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.bar.bar.fnni. 500 IN NS net.*.bar.fnni.",
+          "campus.bar.bar.fnni. 500 IN NS bar.bar.bar.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 6983",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.bar.bar.fnni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.bar.bar.fnni. 500 IN NS net.*.bar.fnni.",
+          "campus.bar.bar.fnni. 500 IN NS bar.bar.bar.fnni.",
+          ";ADDITIONAL",
+          "bar.bar.bar.fnni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

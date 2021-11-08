@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "foo.fnni.www.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 37534",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.fnni.www.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.foo. 500 IN NS foo.*.net.www.",
+          "www.foo. 500 IN NS *.www.foo.",
+          ";ADDITIONAL",
+          "*.www.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

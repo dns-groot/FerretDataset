@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 64810",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar. IN DNAME",
+          ";ANSWER",
+          "bar. 500 IN DNAME net.bar.",
+          ";AUTHORITY",
+          "bar. 500 IN NS bar.",
+          ";ADDITIONAL",
+          "bar. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      },
+      {
+        "Server/s": "knot powerdns ",
+        "Response": [
+          "id 60461",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar. IN DNAME",
+          ";ANSWER",
+          "bar. 500 IN DNAME net.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "bar.uni.bank.www.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54786",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.uni.bank.www. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.uni.bank.www. 500 IN NS bank.uni.bank.www.",
+          "bar.uni.bank.www. 500 IN NS bar.uni.com.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 40095",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.uni.bank.www. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.uni.bank.www. 500 IN NS bank.uni.bank.www.",
+          "bar.uni.bank.www. 500 IN NS bar.uni.com.www.",
+          ";ADDITIONAL",
+          "bank.uni.bank.www. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

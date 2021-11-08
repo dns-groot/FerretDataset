@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "uni.net.www.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 12715",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.net.www.net. IN DNAME",
+          ";ANSWER",
+          "uni.net.www.net. 500 IN DNAME net.bar.net.",
+          ";AUTHORITY",
+          "uni.net.www.net. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

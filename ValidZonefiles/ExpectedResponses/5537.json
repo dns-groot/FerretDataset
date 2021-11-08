@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "email.example.bankcard.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18201",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.example.bankcard.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.example.bankcard.uni. 500 IN NS email.example.com.uni.",
+          "email.example.bankcard.uni. 500 IN NS example.bankcard.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 28919",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.example.bankcard.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.example.bankcard.uni. 500 IN NS email.example.com.uni.",
+          "email.example.bankcard.uni. 500 IN NS example.bankcard.uni.",
+          ";ADDITIONAL",
+          "example.bankcard.uni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "Query": {
+      "Name": "email.*.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44064",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "email.*.uni. IN NS",
+          ";ANSWER",
+          "uni. 500 IN DNAME bankcard.uni.",
+          "email.*.uni. 500 IN CNAME email.*.bankcard.uni.",
+          "email.*.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.uni.",
+          "email.*.bankcard.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.bankcard.uni.",
+          "email.*.bankcard.bankcard.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.bankcard.bankcard.uni.",
+          "email.*.bankcard.bankcard.bankcard.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.bankcard.bankcard.bankcard.uni.",
+          "email.*.bankcard.bankcard.bankcard.bankcard.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.bankcard.bankcard.bankcard.bankcard.uni.",
+          "email.*.bankcard.bankcard.bankcard.bankcard.bankcard.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.bankcard.bankcard.bankcard.bankcard.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 30311",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.*.uni. IN NS",
+          ";ANSWER",
+          "uni. 500 IN DNAME bankcard.uni.",
+          "email.*.uni. 500 IN CNAME email.*.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 10032",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.*.uni. IN NS",
+          ";ANSWER",
+          "uni. 500 IN DNAME bankcard.uni.",
+          "email.*.uni. 500 IN CNAME email.*.bankcard.uni.",
+          "email.*.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.uni.",
+          "email.*.bankcard.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.bankcard.uni.",
+          "email.*.bankcard.bankcard.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.bankcard.bankcard.uni.",
+          "email.*.bankcard.bankcard.bankcard.bankcard.uni. 500 IN CNAME email.*.bankcard.bankcard.bankcard.bankcard.bankcard.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16098",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "email.*.uni. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "D1"
+  }
+]

@@ -1,0 +1,984 @@
+[
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 36327",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN A",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 51458",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN NS",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 34306",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN SOA",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 5859",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN CNAME",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 57295",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN DNAME",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 61006",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN TXT",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.bar.bankcard.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 59394",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.bar.bankcard.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.bar.bankcard.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 55387",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.bar.bankcard.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.bar.bankcard.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 778",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.bar.bankcard.bar. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.bar.bankcard.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 10878",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.bar.bankcard.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.bar.bankcard.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 11442",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.bar.bankcard.bar. IN DNAME",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.bar.bankcard.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 64698",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.bar.bankcard.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 46280",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN A",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 16125",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN NS",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 14159",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN SOA",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 48365",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN CNAME",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 46339",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN DNAME",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.bar.bankcard.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 5290",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.bar.bankcard.bar. IN TXT",
+          ";ANSWER",
+          "email.bar.bankcard.bar. 500 IN DNAME bar.bankcard.www.",
+          "a.email.bar.bankcard.bar. 500 IN CNAME a.bar.bankcard.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bankcard.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 39694",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bankcard.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bankcard.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 61715",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bankcard.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bankcard.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 38614",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bankcard.bar. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bankcard.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 26311",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bankcard.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bankcard.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 54987",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bankcard.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.bankcard.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 61698",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.bankcard.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bankcard.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 24586",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bankcard.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bankcard.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 28929",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bankcard.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bankcard.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 31270",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bankcard.bar. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bankcard.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 59067",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bankcard.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bankcard.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 65211",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bankcard.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.bankcard.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 53109",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.bankcard.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 22930",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 55914",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.bar. IN NS",
+          ";ANSWER",
+          "bankcard.bar. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 8194",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.bar. IN SOA",
+          ";ANSWER",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 54102",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 64415",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 361",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 60238",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 3002",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 43489",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.bar. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 50475",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 51181",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 8511",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

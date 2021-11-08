@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "20.txt:2: using RFC1035 TTL semantics",
+      "zone net/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone net. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.net.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'net.net|DNAME' in zone 'net' is occluded by a delegation at 'net.net'",
+      "[Warning] 'net.net|NS' in zone 'net' is occluded by a DNAME at 'net.net'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.net IN NS net.bank",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.net IN DNAME net.net",
+      "Checked 4 records of 'net', 2 errors, 2 warnings."
+    ]
+  }
+}

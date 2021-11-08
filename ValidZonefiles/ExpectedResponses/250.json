@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.www.foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 41040",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.www.foo.mybankcard. IN NS",
+          ";ANSWER",
+          "foo.mybankcard. 500 IN DNAME foo.mybankcard.",
+          "fnni.www.foo.mybankcard. 500 IN CNAME fnni.www.foo.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14779",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.www.foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "D1"
+  }
+]

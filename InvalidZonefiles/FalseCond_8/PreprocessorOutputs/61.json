@@ -1,0 +1,32 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "61.txt:2: using RFC1035 TTL semantics",
+      "zone foo/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone foo. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'uni.bankcard.example.foo|NS' in zone 'foo' is occluded by a delegation at 'example.foo'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: example.foo IN NS bankcard.example.net",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: uni.bankcard.example.foo IN AAAA 2400:cb00:2049:1::a29f:1804",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: uni.bankcard.example.foo IN NS net",
+      "Checked 6 records of 'foo', 3 errors, 1 warnings."
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "foo.uni.www.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 12360",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.uni.www.bar. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.www.bar. 500 IN NS *.uni.www.bar.",
+          ";ADDITIONAL",
+          "*.uni.www.bar. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

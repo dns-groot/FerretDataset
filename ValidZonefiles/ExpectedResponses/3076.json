@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.fnni.example.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 35962",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.fnni.example.email. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.fnni.example.email. 500 IN NS fnni.example.email.",
+          "fnni.fnni.example.email. 500 IN NS example.email.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 24606",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.fnni.example.email. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.fnni.example.email. 500 IN NS fnni.example.email.",
+          "fnni.fnni.example.email. 500 IN NS example.email.",
+          ";ADDITIONAL",
+          "fnni.example.email. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

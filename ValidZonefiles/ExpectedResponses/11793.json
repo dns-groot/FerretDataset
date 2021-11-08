@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "bar.net.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19879",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.net.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.net.fnni. 500 IN NS example.net.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 65167",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.net.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.net.fnni. 500 IN NS example.net.fnni.",
+          ";ADDITIONAL",
+          "example.net.fnni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

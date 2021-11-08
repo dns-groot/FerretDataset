@@ -1,0 +1,35 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "38.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 38.txt:3: email.com: CNAME and other data",
+      "dns_master_load: 38.txt:3: email.com: CNAME and other data",
+      "zone email.com/IN: loading from master file 38.txt failed: CNAME and other data",
+      "zone email.com/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone email.com. file 38.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[email.com.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME email.com found, but other records with same label exist.",
+      "Checked 4 records of 'email.com', 1 errors, 0 warnings."
+    ]
+  }
+}

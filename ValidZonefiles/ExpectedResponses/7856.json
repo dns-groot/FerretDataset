@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "email.bankcard.campus.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11627",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.bankcard.campus.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.bankcard.campus.com. 500 IN NS net.bankcard.campus.com.",
+          "email.bankcard.campus.com. 500 IN NS bar.*.campus.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 10709",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.bankcard.campus.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.bankcard.campus.com. 500 IN NS bar.*.campus.com.",
+          "email.bankcard.campus.com. 500 IN NS net.bankcard.campus.com.",
+          ";ADDITIONAL",
+          "net.bankcard.campus.com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

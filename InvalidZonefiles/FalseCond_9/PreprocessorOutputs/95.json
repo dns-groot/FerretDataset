@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "95.txt:2: using RFC1035 TTL semantics",
+      "zone fnni/IN: bankcard.campus.fnni/NS 'fnni' has no address records (A or AAAA)",
+      "zone fnni/IN: example.bankcard.net.fnni/NS 'bank.example.bankcard.fnni' has no address records (A or AAAA)",
+      "zone fnni/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone fnni. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bankcard.campus.fnni.] missing glue record",
+      "[example.bankcard.net.fnni.] missing glue record",
+      "",
+      "Error summary:",
+      "   2\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bankcard.campus.fnni IN NS fnni",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: example.bankcard.net.fnni IN NS bank.example.bankcard.fnni",
+      "Checked 7 records of 'fnni', 2 errors, 0 warnings."
+    ]
+  }
+}

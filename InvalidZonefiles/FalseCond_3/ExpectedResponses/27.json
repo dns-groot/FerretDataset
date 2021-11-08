@@ -1,0 +1,279 @@
+[
+  {
+    "Query": {
+      "Name": "net.example.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 2110",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.example.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.example.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 287",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.example.www. IN NS",
+          ";ANSWER",
+          "net.example.www. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.example.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 33374",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.example.www. IN SOA",
+          ";ANSWER",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "net.example.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.example.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 52407",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.example.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.example.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 63848",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.example.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.example.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 2343",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.example.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.example.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 13581",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.example.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.example.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 56723",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.example.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.example.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 51003",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.example.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.example.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 33215",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.example.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.example.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 29443",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.example.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.example.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 4342",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.example.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.example.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

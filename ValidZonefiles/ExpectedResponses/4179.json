@@ -1,0 +1,83 @@
+[
+  {
+    "Query": {
+      "Name": "uni.bank.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47964",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.bank.example. IN NS",
+          ";ANSWER",
+          "bank.example. 500 IN DNAME net.uni.bank.example.",
+          "uni.bank.example. 500 IN CNAME uni.net.uni.bank.example.",
+          "uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.bank.example.",
+          "uni.net.uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.net.uni.bank.example.",
+          "uni.net.uni.net.uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.net.uni.net.uni.bank.example.",
+          "uni.net.uni.net.uni.net.uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.net.uni.net.uni.net.uni.bank.example.",
+          "uni.net.uni.net.uni.net.uni.net.uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.net.uni.net.uni.net.uni.net.uni.bank.example.",
+          "uni.net.uni.net.uni.net.uni.net.uni.net.uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.net.uni.net.uni.net.uni.net.uni.net.uni.bank.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 32355",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.example. IN NS",
+          ";ANSWER",
+          "bank.example. 500 IN DNAME net.uni.bank.example.",
+          "uni.bank.example. 500 IN CNAME uni.net.uni.bank.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 52416",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.example. IN NS",
+          ";ANSWER",
+          "bank.example. 500 IN DNAME net.uni.bank.example.",
+          "uni.bank.example. 500 IN CNAME uni.net.uni.bank.example.",
+          "uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.bank.example.",
+          "uni.net.uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.net.uni.bank.example.",
+          "uni.net.uni.net.uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.net.uni.net.uni.bank.example.",
+          "uni.net.uni.net.uni.net.uni.net.uni.bank.example. 500 IN CNAME uni.net.uni.net.uni.net.uni.net.uni.net.uni.bank.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5476",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "D1"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "90.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 90.txt:2: www: CNAME and other data",
+      "dns_master_load: 90.txt:4: www: CNAME and other data",
+      "zone www/IN: loading from master file 90.txt failed: CNAME and other data",
+      "zone www/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone www. file 90.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[www.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME www found, but other records with same label exist.",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.www IN NS bar.bank",
+      "Checked 4 records of 'www', 2 errors, 0 warnings."
+    ]
+  }
+}

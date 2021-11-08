@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "example.email.uni.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23176",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.email.uni.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.email.uni.foo. 500 IN NS bar.uni.bank.",
+          "example.email.uni.foo. 500 IN NS foo.email.uni.foo.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 20922",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.email.uni.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.email.uni.foo. 500 IN NS bar.uni.bank.",
+          "example.email.uni.foo. 500 IN NS foo.email.uni.foo.",
+          ";ADDITIONAL",
+          "foo.email.uni.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

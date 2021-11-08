@@ -1,0 +1,34 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "46.txt:2: using RFC1035 TTL semantics",
+      "zone www.mybankcard.mybankcard/IN: com.www.mybankcard.mybankcard/NS 'com.www.mybankcard.mybankcard' has no REQUIRED GLUE address records (A or AAAA)",
+      "zone www.mybankcard.mybankcard/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone www.mybankcard.mybankcard. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[com.www.mybankcard.mybankcard.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] Missing glue for 'com.www.mybankcard.mybankcard' in zone 'www.mybankcard.mybankcard'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: com.www.mybankcard.mybankcard IN NS com.www.mybankcard.mybankcard",
+      "Checked 3 records of 'www.mybankcard.mybankcard', 1 errors, 1 warnings."
+    ]
+  }
+}

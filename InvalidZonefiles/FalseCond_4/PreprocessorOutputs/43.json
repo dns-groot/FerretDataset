@@ -1,0 +1,38 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "43.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 43.txt:4: bar.net.uni.email: CNAME and other data",
+      "zone net.uni.email/IN: loading from master file 43.txt failed: CNAME and other data",
+      "zone net.uni.email/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone net.uni.email. file 43.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bar.net.uni.email.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME bar.net.uni.email found, but other records with same label exist.",
+      "[Warning] 'bar.net.uni.email|CNAME' in zone 'net.uni.email' is occluded by a delegation at 'bar.net.uni.email'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.net.uni.email IN NS campus.net.foo.www",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.net.uni.email IN CNAME campus.example.campus.mybankcard",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: campus.net.uni.email IN NS email",
+      "Checked 5 records of 'net.uni.email', 4 errors, 1 warnings."
+    ]
+  }
+}

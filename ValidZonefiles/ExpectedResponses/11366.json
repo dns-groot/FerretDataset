@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.mybankcard.foo.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41890",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.mybankcard.foo.email. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.mybankcard.foo.email. 500 IN NS com.email.",
+          "fnni.mybankcard.foo.email. 500 IN NS mybankcard.foo.email.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 50147",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.mybankcard.foo.email. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.mybankcard.foo.email. 500 IN NS com.email.",
+          "fnni.mybankcard.foo.email. 500 IN NS mybankcard.foo.email.",
+          ";ADDITIONAL",
+          "mybankcard.foo.email. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

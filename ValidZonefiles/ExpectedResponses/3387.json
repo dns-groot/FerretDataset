@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "email.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 46215",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.bank. 500 IN NS www.bank.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 27754",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.bank. 500 IN NS www.bank.",
+          ";ADDITIONAL",
+          "www.bank. 500 IN A 1.1.1.1",
+          "www.bank. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

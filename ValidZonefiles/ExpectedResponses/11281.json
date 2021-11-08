@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "foo.bank.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 13134",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.bank.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.bank.bar. 500 IN NS *.foo.bank.bar.",
+          "foo.bank.bar. 500 IN NS *.net.fnni.bar.",
+          ";ADDITIONAL",
+          "*.foo.bank.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

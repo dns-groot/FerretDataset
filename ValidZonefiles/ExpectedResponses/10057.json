@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "campus.example.bar.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54244",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.example.bar.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.example.bar.mybankcard. 500 IN NS mybankcard.",
+          "campus.example.bar.mybankcard. 500 IN NS bankcard.example.bar.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 43613",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.example.bar.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.example.bar.mybankcard. 500 IN NS mybankcard.",
+          "campus.example.bar.mybankcard. 500 IN NS bankcard.example.bar.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.example.bar.mybankcard. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

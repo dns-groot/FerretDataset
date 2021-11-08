@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "16.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 16.txt:3: foo.bank.uni.mybankcard: multiple RRs of singleton type",
+      "zone uni.mybankcard/IN: loading from master file 16.txt failed: multiple RRs of singleton type",
+      "zone uni.mybankcard/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone uni.mybankcard. file 16.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[foo.bank.uni.mybankcard.] multiple DNAME records",
+      "",
+      "Error summary:",
+      "   1\tmultiple DNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 0,
+    "Output": [
+      "Checked 5 records of 'uni.mybankcard', 0 errors, 0 warnings."
+    ]
+  }
+}

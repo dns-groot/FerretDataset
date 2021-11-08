@@ -1,0 +1,1302 @@
+[
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20794",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57866",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25304",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 24109",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58576",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14121",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.bank.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25281",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.bank.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "example.fnni.bank.foo. 500 IN CNAME example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.bank.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54473",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.bank.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "example.fnni.bank.foo. 500 IN CNAME example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.bank.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19141",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.bank.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "example.fnni.bank.foo. 500 IN CNAME example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.bank.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32444",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.bank.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "example.fnni.bank.foo. 500 IN CNAME example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.bank.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40746",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.bank.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "example.fnni.bank.foo. 500 IN CNAME example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.bank.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 63120",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni.bank.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "example.fnni.bank.foo. 500 IN CNAME example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.bank.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16802",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.bank.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.example.fnni.bank.foo. 500 IN CNAME a.example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.bank.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28385",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.bank.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.example.fnni.bank.foo. 500 IN CNAME a.example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.bank.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 24882",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.bank.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.example.fnni.bank.foo. 500 IN CNAME a.example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.bank.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58339",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.bank.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.example.fnni.bank.foo. 500 IN CNAME a.example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.bank.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8927",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.bank.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.example.fnni.bank.foo. 500 IN CNAME a.example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.bank.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64898",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni.bank.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.example.fnni.bank.foo. 500 IN CNAME a.example.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39340",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "fnni.bank.foo. 500 IN CNAME fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19088",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "fnni.bank.foo. 500 IN CNAME fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16409",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "fnni.bank.foo. 500 IN CNAME fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25844",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "fnni.bank.foo. 500 IN CNAME fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7478",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "fnni.bank.foo. 500 IN CNAME fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10892",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "fnni.bank.foo. 500 IN CNAME fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27663",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.fnni.bank.foo. 500 IN CNAME a.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 26163",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.fnni.bank.foo. 500 IN CNAME a.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60077",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.fnni.bank.foo. 500 IN CNAME a.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3578",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.fnni.bank.foo. 500 IN CNAME a.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11857",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.fnni.bank.foo. 500 IN CNAME a.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55528",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.fnni.bank.foo. 500 IN CNAME a.fnni.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5121",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "bank.foo. 500 IN CNAME bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28302",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "bank.foo. 500 IN CNAME bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48429",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "bank.foo. 500 IN CNAME bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27551",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "bank.foo. 500 IN CNAME bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 26003",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "bank.foo. 500 IN CNAME bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2198",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "bank.foo. 500 IN CNAME bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45466",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.bank.foo. 500 IN CNAME a.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28695",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.bank.foo. 500 IN CNAME a.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37417",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.bank.foo. 500 IN CNAME a.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60287",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.bank.foo. 500 IN CNAME a.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49959",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.bank.foo. 500 IN CNAME a.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1017",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.bank.foo. 500 IN CNAME a.bank.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8329",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51508",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55924",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61982",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41802",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25872",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 31444",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21300",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45435",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 56767",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9610",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9775",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME fnni.bank.mybankcard.",
+          "a.foo. 500 IN CNAME a.fnni.bank.mybankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

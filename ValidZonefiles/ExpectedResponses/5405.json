@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.bar.*.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 60284",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bankcard.bar.*.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.bar.*.fnni. 500 IN NS bankcard.bar.*.fnni.",
+          "bankcard.bar.*.fnni. 500 IN NS mybankcard.*.fnni.",
+          ";ADDITIONAL",
+          "bankcard.bar.*.fnni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

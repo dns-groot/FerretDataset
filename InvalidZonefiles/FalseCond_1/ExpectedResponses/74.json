@@ -1,0 +1,708 @@
+[
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 4708",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN A",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 47388",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN NS",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 9554",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN SOA",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 57526",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN CNAME",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          "uni. 500 IN NS uni.www.campus.bankcard.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 3499",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN DNAME",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 38932",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN TXT",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 5881",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.uni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 16238",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.uni. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 61871",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.uni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 8989",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.uni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 18305",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.uni. IN DNAME",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          ";AUTHORITY",
+          "uni. 500 IN NS uni.www.campus.bankcard.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 62555",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 12100",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN A",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 5214",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN NS",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 31985",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN SOA",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 22123",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN CNAME",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          "uni. 500 IN NS uni.www.campus.bankcard.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 32141",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN DNAME",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 944",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.uni. IN TXT",
+          ";ANSWER",
+          "net.uni. 500 IN DNAME *.",
+          "a.net.uni. 500 IN CNAME a.*.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 58875",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 9140",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni. IN NS",
+          ";ANSWER",
+          "uni. 500 IN NS uni.www.campus.bankcard.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 31195",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni. IN SOA",
+          ";ANSWER",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "uni. 500 IN NS uni.www.campus.bankcard.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 39296",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 25117",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 18247",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 24412",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 10372",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 8479",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 35262",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 53736",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 14306",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

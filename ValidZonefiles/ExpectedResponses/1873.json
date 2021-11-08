@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.bar.net.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39891",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.bar.net.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.net. 500 IN NS campus.net.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 20825",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.bar.net.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.net. 500 IN NS campus.net.",
+          ";ADDITIONAL",
+          "campus.net. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

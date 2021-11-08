@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "foo.www.bank.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58441",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.www.bank.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bank.foo. 500 IN NS bank.foo.",
+          "www.bank.foo. 500 IN NS example.example.*.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 21329",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.www.bank.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bank.foo. 500 IN NS example.example.*.",
+          "www.bank.foo. 500 IN NS bank.foo.",
+          ";ADDITIONAL",
+          "bank.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

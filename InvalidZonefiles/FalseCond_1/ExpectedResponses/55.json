@@ -1,0 +1,373 @@
+[
+  {
+    "Query": {
+      "Name": "com.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 13891",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar. IN A",
+          ";ANSWER",
+          "com.bar. 500 IN A 2.2.2.2",
+          "com.bar. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          "com.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 45402",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar. IN NS",
+          ";ANSWER",
+          "com.bar. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 13444",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar. IN SOA",
+          ";ANSWER",
+          "com.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "com.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 50462",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 47647",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar. IN DNAME",
+          ";ANSWER",
+          "com.bar. 500 IN DNAME com.bar.",
+          ";AUTHORITY",
+          "com.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 7877",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 60166",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN A",
+          ";ANSWER",
+          "com.bar. 500 IN DNAME com.bar.",
+          "a.com.bar. 500 IN CNAME a.com.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54651",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 25765",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN NS",
+          ";ANSWER",
+          "com.bar. 500 IN DNAME com.bar.",
+          "a.com.bar. 500 IN CNAME a.com.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33409",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 35933",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN SOA",
+          ";ANSWER",
+          "com.bar. 500 IN DNAME com.bar.",
+          "a.com.bar. 500 IN CNAME a.com.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60454",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 62622",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN CNAME",
+          ";ANSWER",
+          "com.bar. 500 IN DNAME com.bar.",
+          "a.com.bar. 500 IN CNAME a.com.bar.",
+          ";AUTHORITY",
+          "com.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48377",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 58217",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN DNAME",
+          ";ANSWER",
+          "com.bar. 500 IN DNAME com.bar.",
+          "a.com.bar. 500 IN CNAME a.com.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 61048",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 26694",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN TXT",
+          ";ANSWER",
+          "com.bar. 500 IN DNAME com.bar.",
+          "a.com.bar. 500 IN CNAME a.com.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8538",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

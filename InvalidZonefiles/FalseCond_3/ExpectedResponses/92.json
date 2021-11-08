@@ -1,0 +1,279 @@
+[
+  {
+    "Query": {
+      "Name": "www.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 17939",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 20434",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.bar. IN NS",
+          ";ANSWER",
+          "www.bar. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 2950",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.bar. IN SOA",
+          ";ANSWER",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "www.bar. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 1791",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 21951",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 7776",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 47599",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 10941",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.bar.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 45588",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.bar. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.bar.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 30335",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.bar. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 24736",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind knot ",
+        "Response": [
+          "id 1123",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.bar. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

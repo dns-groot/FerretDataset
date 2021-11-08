@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "99.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 99.txt:3: uni.mybankcard.fnni.email: multiple RRs of singleton type",
+      "zone email/IN: loading from master file 99.txt failed: multiple RRs of singleton type",
+      "zone email/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone email. file 99.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[uni.mybankcard.fnni.email.] multiple DNAME records",
+      "",
+      "Error summary:",
+      "   1\tmultiple DNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 0,
+    "Output": [
+      "Checked 7 records of 'email', 0 errors, 0 warnings."
+    ]
+  }
+}

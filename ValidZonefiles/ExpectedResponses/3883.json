@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "net.www.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 22762",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.www.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.www.www. 500 IN NS example.www.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 26675",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.www.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.www.www. 500 IN NS example.www.www.",
+          ";ADDITIONAL",
+          "example.www.www. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

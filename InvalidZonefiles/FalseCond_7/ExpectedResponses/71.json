@@ -1,0 +1,1572 @@
+[
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 2981",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN A",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 62110",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 47033",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 20665",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN CNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 45796",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 19435",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN TXT",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.example.example.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 35243",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN A",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "campus.example.example.fnni. 500 IN CNAME campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53649",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN A",
+          ";ANSWER",
+          "campus.example.example.fnni. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.example.example.fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12578",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "campus.example.example.fnni. 500 IN CNAME campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12023",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.example.example.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 416",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "campus.example.example.fnni. 500 IN CNAME campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59288",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.example.example.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9407",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN CNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "campus.example.example.fnni. 500 IN CNAME campus.example.example.example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9424",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.example.example.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 31055",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "campus.example.example.fnni. 500 IN CNAME campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59698",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.example.example.fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41629",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN TXT",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "campus.example.example.fnni. 500 IN CNAME campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60048",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.example.example.fnni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.example.example.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 56436",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.example.example.fnni. IN A",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.campus.example.example.fnni. 500 IN CNAME a.campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.example.example.fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 3762",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.example.example.fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.campus.example.example.fnni. 500 IN CNAME a.campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.example.example.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 28102",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.example.example.fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.campus.example.example.fnni. 500 IN CNAME a.campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.example.example.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 43478",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.example.example.fnni. IN CNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.campus.example.example.fnni. 500 IN CNAME a.campus.example.example.example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.example.example.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 36839",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.example.example.fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.campus.example.example.fnni. 500 IN CNAME a.campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.example.example.fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 7424",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.example.example.fnni. IN TXT",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.campus.example.example.fnni. 500 IN CNAME a.campus.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.example.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59022",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN A",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.example.fnni. 500 IN CNAME example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13859",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.example.fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6976",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.example.fnni. 500 IN CNAME example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 1406",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.example.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33262",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.example.fnni. 500 IN CNAME example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59295",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.example.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61501",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN CNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.example.fnni. 500 IN CNAME example.example.example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48278",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.example.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58337",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.example.fnni. 500 IN CNAME example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57220",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.example.fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49116",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN TXT",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.example.fnni. 500 IN CNAME example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10630",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.example.fnni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.example.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 23239",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.example.fnni. IN A",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.example.fnni. 500 IN CNAME a.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.example.fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 11215",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.example.fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.example.fnni. 500 IN CNAME a.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.example.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 5283",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.example.fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.example.fnni. 500 IN CNAME a.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.example.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 27306",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.example.fnni. IN CNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.example.fnni. 500 IN CNAME a.example.example.example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.example.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 8291",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.example.fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.example.fnni. 500 IN CNAME a.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.example.fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 51140",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.example.fnni. IN TXT",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.example.fnni. 500 IN CNAME a.example.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47216",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN A",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.fnni. 500 IN CNAME example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37265",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36065",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.fnni. 500 IN CNAME example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 4961",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55218",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.fnni. 500 IN CNAME example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5098",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53342",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN CNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.fnni. 500 IN CNAME example.example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18121",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33205",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.fnni. 500 IN CNAME example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44921",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15061",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN TXT",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "example.fnni. 500 IN CNAME example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 27517",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.fnni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 19416",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni. IN A",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.fnni. 500 IN CNAME a.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 58798",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.fnni. 500 IN CNAME a.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 19892",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.fnni. 500 IN CNAME a.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 28249",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni. IN CNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.fnni. 500 IN CNAME a.example.example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 20390",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.fnni. 500 IN CNAME a.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 47496",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.fnni. IN TXT",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.example.fnni. 500 IN CNAME a.example.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 54047",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 21246",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 46389",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 9097",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 35286",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 27374",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 2917",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN A",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63051",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN NS",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 51934",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN SOA",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 56244",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN CNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          "fnni. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 6476",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN DNAME",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 15556",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni. IN TXT",
+          ";ANSWER",
+          "fnni. 500 IN DNAME example.",
+          "a.fnni. 500 IN CNAME a.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

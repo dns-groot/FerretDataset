@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "foo.bank.campus.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 48996",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.bank.campus. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.bank.campus. 500 IN NS bankcard.foo.bank.campus.",
+          "foo.bank.campus. 500 IN NS bankcard.foo.bank.bankcard.",
+          ";ADDITIONAL",
+          "bankcard.foo.bank.campus. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "69.txt:2: using RFC1035 TTL semantics",
+      "zone com.email/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone com.email. file 69.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[com.email.] child record exists under DNAME",
+      "",
+      "Error summary:",
+      "   1\tchild record exists under DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bankcard.com.com.email IN NS bankcard.com.bank.email",
+      "Checked 5 records of 'com.email', 1 errors, 0 warnings."
+    ]
+  }
+}

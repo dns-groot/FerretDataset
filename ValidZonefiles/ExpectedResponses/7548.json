@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "uni.campus.campus.example.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48538",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.campus.campus.example. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.campus.example. 500 IN NS campus.bank.",
+          "campus.campus.example. 500 IN NS campus.example.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 33058",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.campus.campus.example. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.campus.example. 500 IN NS campus.bank.",
+          "campus.campus.example. 500 IN NS campus.example.",
+          ";ADDITIONAL",
+          "campus.example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

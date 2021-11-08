@@ -1,0 +1,34 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "96.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 96.txt:3: bank.bankcard: multiple RRs of singleton type",
+      "zone bankcard/IN: loading from master file 96.txt failed: multiple RRs of singleton type",
+      "zone bankcard/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone bankcard. file 96.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bank.bankcard.] multiple CNAME records",
+      "",
+      "Error summary:",
+      "   1\tmultiple CNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Duplicate CNAME found at 'bank.bankcard'",
+      "Checked 4 records of 'bankcard', 1 errors, 0 warnings."
+    ]
+  }
+}

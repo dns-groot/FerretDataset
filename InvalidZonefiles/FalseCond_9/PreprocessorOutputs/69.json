@@ -1,0 +1,39 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "69.txt:2: using RFC1035 TTL semantics",
+      "zone email/IN: net.email/NS '*.foo.www.email' has no address records (A or AAAA)",
+      "zone email/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone email. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.email.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] NS record in zone 'email: non-hostname content *.foo.www.email.",
+      "[Warning] 'bankcard.foo.net.email|DNAME' in zone 'email' is occluded by a delegation at 'net.email'",
+      "[Warning] 'net.net.email|CNAME' in zone 'email' is occluded by a delegation at 'net.email'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.email IN NS *.foo.www.email",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: foo.net.email IN TYPE0 ",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bankcard.foo.net.email IN DNAME bankcard.com.www.email",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.net.email IN CNAME *.foo.www.email",
+      "Checked 6 records of 'email', 4 errors, 3 warnings."
+    ]
+  }
+}

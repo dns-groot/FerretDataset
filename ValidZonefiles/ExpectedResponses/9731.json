@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "email.foo.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 46745",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.foo.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.foo.net. 500 IN NS *.net.bar.net.",
+          "email.foo.net. 500 IN NS *.email.foo.net.",
+          ";ADDITIONAL",
+          "*.email.foo.net. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "www.bank.bankcard.foo.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 141",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.bank.bankcard.foo. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.foo. 500 IN NS com.bankcard.foo.",
+          "bankcard.foo. 500 IN NS bank.fnni.bankcard.bar.",
+          ";ADDITIONAL",
+          "com.bankcard.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

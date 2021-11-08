@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "net.example.campus.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 52548",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.example.campus.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.campus.bank. 500 IN NS bar.bank.",
+          "example.campus.bank. 500 IN NS *.example.campus.bank.",
+          ";ADDITIONAL",
+          "*.example.campus.bank. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

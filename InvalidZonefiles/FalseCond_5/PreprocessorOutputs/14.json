@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "14.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 14.txt:3: net.com.uni: multiple RRs of singleton type",
+      "zone uni/IN: loading from master file 14.txt failed: multiple RRs of singleton type",
+      "zone uni/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone uni. file 14.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.com.uni.] multiple DNAME records",
+      "",
+      "Error summary:",
+      "   1\tmultiple DNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 0,
+    "Output": [
+      "Checked 5 records of 'uni', 0 errors, 0 warnings."
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "Query": {
+      "Name": "uni.bank.net.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 36102",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.net.mybankcard. IN CNAME",
+          ";ANSWER",
+          "uni.bank.net.mybankcard. 500 IN CNAME net.email.net.mybankcard.",
+          ";AUTHORITY",
+          "net.mybankcard. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29574",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.net.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "W1"
+  }
+]

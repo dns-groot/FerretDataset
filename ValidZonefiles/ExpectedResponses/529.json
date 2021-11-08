@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.net.*.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 52268",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.net.*.bank. IN NS",
+          ";ANSWER",
+          "bank. 500 IN DNAME www.foo.uni.",
+          "bankcard.net.*.bank. 500 IN CNAME bankcard.net.*.www.foo.uni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "D1"
+  }
+]

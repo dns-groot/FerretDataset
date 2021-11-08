@@ -1,0 +1,1909 @@
+[
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63808",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 56195",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 16034",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 51657",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 16696",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 9700",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 22875",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58450",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN A",
+          ";ANSWER",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60047",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55587",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN NS",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1816",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3322",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN SOA",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45410",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63087",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10876",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28471",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14081",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60763",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN TXT",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.com.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 46215",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "mybankcard.bankcard.com.www. 500 IN CNAME mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58214",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.com.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18781",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "mybankcard.bankcard.com.www. 500 IN CNAME mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 41223",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.com.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40816",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "mybankcard.bankcard.com.www. 500 IN CNAME mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3862",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.com.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57038",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "mybankcard.bankcard.com.www. 500 IN CNAME mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63757",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.com.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45187",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "mybankcard.bankcard.com.www. 500 IN CNAME mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37396",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.com.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15257",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "mybankcard.bankcard.com.www. 500 IN CNAME mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10058",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.com.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48384",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39872",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN A",
+          ";ANSWER",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45634",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 64935",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN NS",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41083",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62669",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN SOA",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57901",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55899",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3129",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 64056",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.com.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59283",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.mybankcard.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7089",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.com.www. IN TXT",
+          ";ANSWER",
+          "a.mybankcard.bankcard.com.www. 500 IN CNAME a.bank.foo.",
+          "mybankcard.bankcard.com.www. 500 IN DNAME bank.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.com.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44595",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "bankcard.com.www. 500 IN CNAME bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10164",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.com.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47063",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "bankcard.com.www. 500 IN CNAME bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 23200",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.com.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25775",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "bankcard.com.www. 500 IN CNAME bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 50030",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.com.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8374",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "bankcard.com.www. 500 IN CNAME bankcard.com.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18049",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.com.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19599",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "bankcard.com.www. 500 IN CNAME bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 42080",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.com.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9422",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "bankcard.com.www. 500 IN CNAME bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 61543",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.com.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.com.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 31841",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.com.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.bankcard.com.www. 500 IN CNAME a.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.com.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 15484",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.com.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.bankcard.com.www. 500 IN CNAME a.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.com.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 29517",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.com.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.bankcard.com.www. 500 IN CNAME a.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.com.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 39391",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.com.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.bankcard.com.www. 500 IN CNAME a.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.com.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 62193",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.com.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.bankcard.com.www. 500 IN CNAME a.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.com.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 56022",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.com.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.bankcard.com.www. 500 IN CNAME a.bankcard.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47300",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "com.www. 500 IN CNAME com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43146",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30807",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "com.www. 500 IN CNAME com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58825",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47657",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "com.www. 500 IN CNAME com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63158",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14208",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "com.www. 500 IN CNAME com.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35031",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4965",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "com.www. 500 IN CNAME com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 21688",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48325",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "com.www. 500 IN CNAME com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 11028",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 60360",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.com.www. 500 IN CNAME a.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 56340",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.com.www. 500 IN CNAME a.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 59409",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.com.www. 500 IN CNAME a.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63548",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.com.www. 500 IN CNAME a.com.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 5353",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.com.www. 500 IN CNAME a.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 28307",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.com.www. 500 IN CNAME a.com.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 42476",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 19870",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN NS",
+          ";ANSWER",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 18888",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 59159",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 32110",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 32862",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 8173",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63289",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 58701",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 41334",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 3372",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 55057",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.foo.",
+          "a.www. 500 IN CNAME a.net.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

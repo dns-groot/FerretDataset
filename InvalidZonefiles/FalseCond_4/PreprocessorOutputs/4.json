@@ -1,0 +1,34 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "4.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 4.txt:3: uni.uni.com: CNAME and other data",
+      "zone com/IN: loading from master file 4.txt failed: CNAME and other data",
+      "zone com/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone com. file 4.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[uni.uni.com.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME uni.uni.com found, but other records with same label exist.",
+      "Checked 5 records of 'com', 1 errors, 0 warnings."
+    ]
+  }
+}

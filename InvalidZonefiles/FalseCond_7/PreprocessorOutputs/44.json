@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "44.txt:2: using RFC1035 TTL semantics",
+      "zone bar/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone bar. file 44.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.bar.] child record exists under DNAME",
+      "",
+      "Error summary:",
+      "   1\tchild record exists under DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] NS record in zone 'bar: non-hostname content www.foo.net.*.",
+      "[Warning] 'foo.net.bar|TYPE0' in zone 'bar' is occluded by a DNAME at 'net.bar'",
+      "[Warning] 'www.foo.net.bar|NS' in zone 'bar' is occluded by a DNAME at 'net.bar'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: www.foo.net.bar IN NS foo.net.campus",
+      "Checked 5 records of 'bar', 1 errors, 3 warnings."
+    ]
+  }
+}

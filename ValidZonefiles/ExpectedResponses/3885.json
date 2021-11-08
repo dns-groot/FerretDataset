@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "net.com.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51962",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.com.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.com.net. 500 IN NS bankcard.com.net.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 27018",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.com.net. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.com.net. 500 IN NS bankcard.com.net.",
+          ";ADDITIONAL",
+          "bankcard.com.net. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "22.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 22.txt:4: foo.net.net: CNAME and other data",
+      "zone net.net/IN: loading from master file 22.txt failed: CNAME and other data",
+      "zone net.net/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone net.net. file 22.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[foo.net.net.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME foo.net.net found, but other records with same label exist.",
+      "[Warning] 'foo.net.net|CNAME' in zone 'net.net' is occluded by a DNAME at 'foo.net.net'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: com.mybankcard.net.net IN NS com.mybankcard.net.uni",
+      "Checked 6 records of 'net.net', 2 errors, 1 warnings."
+    ]
+  }
+}

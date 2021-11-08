@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "83.txt:2: using RFC1035 TTL semantics",
+      "zone campus/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone campus. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[fnni.bar.example.campus.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'fnni.bar.example.campus|DNAME' in zone 'campus' is occluded by a delegation at 'fnni.bar.example.campus'",
+      "[Warning] 'fnni.bar.example.campus|NS' in zone 'campus' is occluded by a DNAME at 'fnni.bar.example.campus'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: fnni.bar.example.campus IN DNAME foo.email.example.campus",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: fnni.bar.example.campus IN NS www.bar.email.mybankcard",
+      "Checked 7 records of 'campus', 2 errors, 2 warnings."
+    ]
+  }
+}

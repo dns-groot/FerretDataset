@@ -1,0 +1,5325 @@
+[
+  {
+    "Query": {
+      "Name": "bar.com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45481",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "bar.com.com. 500 IN CNAME bar.com.bar.com.com.",
+          "bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 31485",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9827",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "bar.com.com. 500 IN CNAME bar.com.bar.com.com.",
+          "bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53775",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60396",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "bar.com.com. 500 IN CNAME bar.com.bar.com.com.",
+          "bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35450",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2514",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "bar.com.com. 500 IN CNAME bar.com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63623",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29665",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "bar.com.com. 500 IN CNAME bar.com.bar.com.com.",
+          "bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57398",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.com.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15073",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "bar.com.com. 500 IN CNAME bar.com.bar.com.com.",
+          "bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13191",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10880",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6826",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5852",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48800",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53032",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54699",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13209",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 45432",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21403",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43380",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.com.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18414",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 45691",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 869",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63241",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2343",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53789",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55610",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3140",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39477",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 1325",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30211",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 11104",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62446",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6256",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.example.com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 50861",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.example.com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.example.com.com. 500 IN CNAME fnni.example.com.bar.com.com.",
+          "fnni.example.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13282",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.example.com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.example.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2589",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.example.com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.example.com.com. 500 IN CNAME fnni.example.com.bar.com.com.",
+          "fnni.example.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 31684",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.example.com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.example.com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9018",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.example.com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.example.com.com. 500 IN CNAME fnni.example.com.bar.com.com.",
+          "fnni.example.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15046",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.example.com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.example.com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12962",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.example.com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.example.com.com. 500 IN CNAME fnni.example.com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35028",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.example.com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.example.com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30270",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.example.com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.example.com.com. 500 IN CNAME fnni.example.com.bar.com.com.",
+          "fnni.example.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10784",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.example.com.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.example.com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5049",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.example.com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.example.com.com. 500 IN CNAME fnni.example.com.bar.com.com.",
+          "fnni.example.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6785",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.example.com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.example.com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53745",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.example.com.com. 500 IN CNAME a.fnni.example.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54760",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.example.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18462",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.example.com.com. 500 IN CNAME a.fnni.example.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53841",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.example.com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38672",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.example.com.com. 500 IN CNAME a.fnni.example.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37317",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.example.com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41178",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.example.com.com. 500 IN CNAME a.fnni.example.com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 51329",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.example.com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 35342",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.example.com.com. 500 IN CNAME a.fnni.example.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3169",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.example.com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3970",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.example.com.com. 500 IN CNAME a.fnni.example.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6564",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.example.com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45446",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com.com. 500 IN CNAME example.com.bar.com.com.",
+          "example.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 17131",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 63079",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com.com. 500 IN CNAME example.com.bar.com.com.",
+          "example.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 27805",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15713",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com.com. 500 IN CNAME example.com.bar.com.com.",
+          "example.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48657",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12946",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com.com. 500 IN CNAME example.com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53022",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32170",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com.com. 500 IN CNAME example.com.bar.com.com.",
+          "example.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60622",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com.com. IN DNAME",
+          ";ANSWER",
+          "example.com.com. 500 IN DNAME fnni.fnni.mybankcard.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 43580",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com.com. 500 IN CNAME example.com.bar.com.com.",
+          "example.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20841",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48868",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43015",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9795",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 47354",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32918",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6218",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32983",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 11966",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5312",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62622",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37311",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com.com. 500 IN CNAME a.example.com.bar.com.com.",
+          "a.example.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 41128",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61366",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "com.com. 500 IN CNAME com.bar.com.com.",
+          "com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5470",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29590",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "com.com. 500 IN CNAME com.bar.com.com.",
+          "com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58888",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5139",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "com.com. 500 IN CNAME com.bar.com.com.",
+          "com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59070",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55781",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "com.com. 500 IN CNAME com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15516",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11270",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "com.com. 500 IN CNAME com.bar.com.com.",
+          "com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 64971",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57926",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "com.com. 500 IN CNAME com.bar.com.com.",
+          "com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 32462",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27515",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com.com. 500 IN CNAME a.com.bar.com.com.",
+          "a.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 50529",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59153",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com.com. 500 IN CNAME a.com.bar.com.com.",
+          "a.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43390",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42422",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com.com. 500 IN CNAME a.com.bar.com.com.",
+          "a.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 41530",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 56443",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com.com. 500 IN CNAME a.com.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6070",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 24871",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com.com. 500 IN CNAME a.com.bar.com.com.",
+          "a.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48009",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51975",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com.com. 500 IN CNAME a.com.bar.com.com.",
+          "a.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44965",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 56911",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10287",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47867",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 51132",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14438",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6197",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59500",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 51443",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40554",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13237",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 17650",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43346",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.fnni.mybankcard.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41625",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.fnni.mybankcard.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 4192",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.fnni.mybankcard.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7340",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.fnni.mybankcard.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 22523",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.fnni.mybankcard.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45836",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.fnni.mybankcard.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62247",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.fnni.mybankcard.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47419",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.fnni.mybankcard.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 41765",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.fnni.mybankcard.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36081",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.fnni.mybankcard.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54012",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.fnni.mybankcard.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 24405",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.fnni.mybankcard.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63238",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.fnni.mybankcard.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.fnni.mybankcard.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12748",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.fnni.mybankcard.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 42786",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.fnni.mybankcard.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41447",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.fnni.mybankcard.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35902",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.fnni.mybankcard.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34310",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.fnni.mybankcard.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30829",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.fnni.mybankcard.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19944",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.fnni.mybankcard.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39658",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.fnni.mybankcard.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32213",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.fnni.mybankcard.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53639",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.fnni.mybankcard.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32482",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.fnni.mybankcard.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59788",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.fnni.mybankcard.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.mybankcard.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20659",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.mybankcard.com. 500 IN CNAME fnni.mybankcard.bar.com.com.",
+          "fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 639",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.mybankcard.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40777",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.mybankcard.com. 500 IN CNAME fnni.mybankcard.bar.com.com.",
+          "fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13820",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.mybankcard.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18804",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.mybankcard.com. 500 IN CNAME fnni.mybankcard.bar.com.com.",
+          "fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 11334",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.mybankcard.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33584",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.mybankcard.com. 500 IN CNAME fnni.mybankcard.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56379",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.mybankcard.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27202",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.mybankcard.com. 500 IN CNAME fnni.mybankcard.bar.com.com.",
+          "fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3650",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.mybankcard.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51196",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "fnni.mybankcard.com. 500 IN CNAME fnni.mybankcard.bar.com.com.",
+          "fnni.mybankcard.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 17542",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.mybankcard.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.mybankcard.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49363",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.mybankcard.com. 500 IN CNAME a.fnni.mybankcard.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43205",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.mybankcard.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53652",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.mybankcard.com. 500 IN CNAME a.fnni.mybankcard.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15006",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.mybankcard.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53247",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.mybankcard.com. 500 IN CNAME a.fnni.mybankcard.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37108",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.mybankcard.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13239",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.mybankcard.com. 500 IN CNAME a.fnni.mybankcard.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63301",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.mybankcard.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34081",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.mybankcard.com. 500 IN CNAME a.fnni.mybankcard.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39762",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.mybankcard.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27070",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.fnni.mybankcard.com. 500 IN CNAME a.fnni.mybankcard.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.fnni.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6678",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.mybankcard.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6992",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "mybankcard.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "mybankcard.com. 500 IN CNAME mybankcard.bar.com.com.",
+          "mybankcard.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57981",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60626",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "mybankcard.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "mybankcard.com. 500 IN CNAME mybankcard.bar.com.com.",
+          "mybankcard.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9981",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18998",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "mybankcard.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "mybankcard.com. 500 IN CNAME mybankcard.bar.com.com.",
+          "mybankcard.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 65430",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21617",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "mybankcard.com. 500 IN CNAME mybankcard.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 49465",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64866",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "mybankcard.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "mybankcard.com. 500 IN CNAME mybankcard.bar.com.com.",
+          "mybankcard.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44755",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29930",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "mybankcard.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "mybankcard.com. 500 IN CNAME mybankcard.bar.com.com.",
+          "mybankcard.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62162",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48918",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.mybankcard.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.mybankcard.com. 500 IN CNAME a.mybankcard.bar.com.com.",
+          "a.mybankcard.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 40857",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64303",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.mybankcard.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.mybankcard.com. 500 IN CNAME a.mybankcard.bar.com.com.",
+          "a.mybankcard.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13872",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36227",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.mybankcard.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.mybankcard.com. 500 IN CNAME a.mybankcard.bar.com.com.",
+          "a.mybankcard.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20377",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47254",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.mybankcard.com. 500 IN CNAME a.mybankcard.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 27393",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4567",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.mybankcard.com. 500 IN CNAME a.mybankcard.bar.com.com.",
+          "a.mybankcard.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 1030",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5144",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.mybankcard.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.mybankcard.com. 500 IN CNAME a.mybankcard.bar.com.com.",
+          "a.mybankcard.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.mybankcard.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55677",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58105",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 1223",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6841",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8998",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 35463",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 32735",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59962",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57445",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 63701",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12014",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52784",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 36469",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64647",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com. 500 IN CNAME example.bar.com.com.",
+          "example.bar.com.com. 500 IN CNAME example.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18061",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61953",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com. 500 IN CNAME example.bar.com.com.",
+          "example.bar.com.com. 500 IN CNAME example.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15169",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51694",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com. 500 IN CNAME example.bar.com.com.",
+          "example.bar.com.com. 500 IN CNAME example.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56696",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37448",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com. 500 IN CNAME example.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10111",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 26387",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com. 500 IN CNAME example.bar.com.com.",
+          "example.bar.com.com. 500 IN CNAME example.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 34383",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com. IN DNAME",
+          ";ANSWER",
+          "example.com. 500 IN DNAME fnni.example.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32219",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "example.com. 500 IN CNAME example.bar.com.com.",
+          "example.bar.com.com. 500 IN CNAME example.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15649",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29770",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35591",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23145",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 38315",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60850",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10189",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53339",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 46514",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29662",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 61250",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29676",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.example.com. 500 IN CNAME a.example.bar.com.com.",
+          "a.example.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.example.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14242",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 32517",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 27981",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com. IN NS",
+          ";ANSWER",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 14857",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 60902",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 60993",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 33160",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40449",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN A",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9559",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32200",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN NS",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28278",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19695",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN SOA",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8805",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2119",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN CNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          ";AUTHORITY",
+          "com. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43687",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 22963",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN DNAME",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62396",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28078",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com. IN TXT",
+          ";ANSWER",
+          "com. 500 IN DNAME bar.com.com.",
+          "a.com. 500 IN CNAME a.bar.com.com.",
+          "a.bar.com.com. 500 IN CNAME a.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 34533",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

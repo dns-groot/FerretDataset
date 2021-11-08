@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "55.txt:2: using RFC1035 TTL semantics",
+      "zone fnni.www/IN: campus.fnni.www/NS 'example.fnni.www' has no address records (A or AAAA)",
+      "zone fnni.www/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone fnni.www. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[campus.fnni.www.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'campus.fnni.www|TXT' in zone 'fnni.www' is occluded by a delegation at 'campus.fnni.www'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: campus.fnni.www IN NS example.fnni.www",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: campus.fnni.www IN TXT \"This_is_a_sample_text\"",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: campus.fnni.www IN A 1.1.1.1",
+      "Checked 5 records of 'fnni.www', 3 errors, 1 warnings."
+    ]
+  }
+}

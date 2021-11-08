@@ -1,0 +1,37 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "16.txt:2: using RFC1035 TTL semantics",
+      "zone com/IN: net.bank.fnni.com/NS 'net.*.fnni.com' has no address records (A or AAAA)",
+      "zone com/IN: net.bank.fnni.com/NS 'bank.fnni.com' has no address records (A or AAAA)",
+      "zone com/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone com. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.bank.fnni.com.] missing glue record",
+      "[net.bank.fnni.com.] missing glue record",
+      "",
+      "Error summary:",
+      "   2\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] NS record in zone 'com: non-hostname content net.*.fnni.com.",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.bank.fnni.com IN NS net.*.fnni.com",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.bank.fnni.com IN NS bank.fnni.com",
+      "Checked 6 records of 'com', 2 errors, 1 warnings."
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "19.txt:3: ignoring out-of-zone data (www.bank.bar)",
+      "19.txt:4: ignoring out-of-zone data (email.com.bank.bar)",
+      "19.txt:5: using RFC1035 TTL semantics",
+      "zone email.bar.bank.bar/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone email.bar.bank.bar. file 19.txt has 3 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "warning: [email.bar.bank.bar.] zone loader, ignoring out-of-zone data, owner www.bank.bar.",
+      "warning: [email.bar.bank.bar.] zone loader, ignoring out-of-zone data, owner email.com.bank.bar.",
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      ""
+    ]
+  }
+}

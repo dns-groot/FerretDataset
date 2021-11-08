@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "mybankcard.net.fnni.bar.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41677",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "mybankcard.net.fnni.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.net.fnni.bar. 500 IN NS fnni.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 25601",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "mybankcard.net.fnni.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.net.fnni.bar. 500 IN NS fnni.bar.",
+          ";ADDITIONAL",
+          "fnni.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

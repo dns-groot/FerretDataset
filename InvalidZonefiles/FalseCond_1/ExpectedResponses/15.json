@@ -1,0 +1,2287 @@
+[
+  {
+    "Query": {
+      "Name": "com.bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 789",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "com.bar.foo. 500 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 4646",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 22706",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39264",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "com.bar.foo. 500 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 62246",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 6802",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15594",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "com.bar.foo. 500 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 53484",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 37532",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 59136",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "com.bar.foo. 500 IN CNAME com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9755",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "com.bar.foo. 500 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 52114",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 65238",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6632",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "com.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "com.bar.foo. 500 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 45519",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 18004",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "com.bar.foo. 3600 IN CNAME com.bar.com.bar.foo.",
+          "com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54125",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 18015",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 31553",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34539",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 34747",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 5390",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20716",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 7855",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 2333",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 58492",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40661",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 40952",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 56806",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57633",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.com.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 26620",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 81",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49664",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 6752",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 42838",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13254",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 24783",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 64808",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33179",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 1336",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 64080",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 20744",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.com.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 50020",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 63667",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 43119",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60213",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 36718",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 31618",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "bar.foo. 3600 IN CNAME bar.com.bar.foo.",
+          "bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33363",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 59182",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 12040",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19382",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 39889",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 15705",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16979",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 26410",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 10118",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 62053",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.com.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16575",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 41930",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 8782",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55953",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 64580",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 36723",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.bar.foo. 3600 IN CNAME a.bar.com.bar.foo.",
+          "a.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.bar.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41513",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 3791",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 40925",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45362",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 54221",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 45179",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18597",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 16033",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 41122",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 44929",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4953",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 63862",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 20029",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6548",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 6501",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 22410",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 1263",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 64670",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 55640",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 17671",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 42093",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 49591",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10856",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 38829",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 29468",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8640",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 3576",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 65479",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7775",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 3268",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 30891",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 36285",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS bank.com.bar.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 17107",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 48461",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 51103",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33385",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME com.bar.foo.",
+          "a.foo. 500 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo. 500 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 23937",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 55252",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 3600 IN DNAME com.bar.foo.",
+          "a.foo. 3600 IN CNAME a.com.bar.foo.",
+          "a.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.foo.",
+          "a.com.bar.com.bar.com.bar.com.bar.foo. 3600 IN CNAME a.com.bar.com.bar.com.bar.com.bar.com.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

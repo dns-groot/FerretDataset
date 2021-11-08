@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "bank.com.bank.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51237",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.com.bank. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.com.bank. 500 IN NS www.bank.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 64336",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bank.com.bank. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.com.bank. 500 IN NS www.bank.",
+          ";ADDITIONAL",
+          "www.bank. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

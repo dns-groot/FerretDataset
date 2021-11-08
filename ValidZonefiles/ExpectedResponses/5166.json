@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "foo.example.email.campus.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 23423",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.example.email.campus. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.email.campus. 500 IN NS campus.",
+          "example.email.campus. 500 IN NS bar.example.bank.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "3.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 3.txt:4: example: CNAME and other data",
+      "zone example/IN: loading from master file 3.txt failed: CNAME and other data",
+      "zone example/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone example. file 3.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[example.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME example found, but other records with same label exist.",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: www.bar.example IN NS www.bar.fnni",
+      "Checked 5 records of 'example', 2 errors, 0 warnings."
+    ]
+  }
+}

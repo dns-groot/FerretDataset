@@ -1,0 +1,34 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "91.txt:2: using RFC1035 TTL semantics",
+      "zone uni/IN: bank.uni/NS 'bank.uni' has no REQUIRED GLUE address records (A or AAAA)",
+      "zone uni/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone uni. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bank.uni.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] Missing glue for 'bank.uni' in zone 'uni'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bank.uni IN NS bank.uni",
+      "Checked 3 records of 'uni', 1 errors, 1 warnings."
+    ]
+  }
+}

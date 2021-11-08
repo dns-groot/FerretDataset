@@ -1,0 +1,2086 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.*.foo.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 55358",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.*.foo.mybankcard. IN A",
+          ";ANSWER",
+          "bankcard.*.foo.mybankcard. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          "mybankcard. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.*.foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 25956",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.*.foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.*.foo.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 62293",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.*.foo.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.*.foo.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 35803",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.*.foo.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.*.foo.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 39147",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.*.foo.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.*.foo.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 39108",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.*.foo.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.*.foo.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 55335",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.*.foo.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.*.foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 54278",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.*.foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.*.foo.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 28315",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.*.foo.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.*.foo.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 28175",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.*.foo.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.*.foo.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 42391",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.*.foo.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.*.foo.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 24192",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.*.foo.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.foo.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 38310",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.foo.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 5647",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.foo.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 38069",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.foo.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.foo.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 37511",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.foo.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.foo.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 43135",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.foo.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.foo.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 43923",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.foo.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.foo.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 49044",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.foo.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 10353",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.foo.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 21312",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.foo.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.foo.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 64466",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.foo.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.foo.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 46236",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.foo.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.foo.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 27035",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.foo.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.foo.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 29018",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.foo.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 11545",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.foo.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 26854",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.foo.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.foo.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 55014",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.foo.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.foo.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 53723",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.foo.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.foo.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 53751",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.foo.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.foo.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 42417",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.foo.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 40006",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.foo.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 9455",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.foo.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.foo.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 46204",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.foo.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.foo.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 24334",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.foo.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.foo.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 65237",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.foo.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 9698",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 32561",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 11732",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 40020",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 51830",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 64813",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 14357",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 41413",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 29701",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 41012",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 12916",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 32546",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45351",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 6924",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 43595",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 18889",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13141",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 18980",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11532",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 20621",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47266",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 53946",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37158",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 54011",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61867",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 1482",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64878",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 65023",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36200",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 57124",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38530",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 21034",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41156",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 28496",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18631",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 4940",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32282",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 48838",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 31848",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 20652",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14621",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 64048",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44999",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 132",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64699",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 34432",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15177",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 500 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 38588",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "a.email.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.mybankcard. 3600 IN NS bankcard.*.foo.mybankcard.",
+          ";ADDITIONAL",
+          "bankcard.*.foo.mybankcard. 3600 IN A 1.1.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 11005",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 46442",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard. IN NS",
+          ";ANSWER",
+          "mybankcard. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 64368",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard. IN SOA",
+          ";ANSWER",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "mybankcard. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 32067",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 57557",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 21536",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 33937",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 38040",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 40311",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 41420",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 47812",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 16004",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

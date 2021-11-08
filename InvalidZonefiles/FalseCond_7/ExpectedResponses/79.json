@@ -1,0 +1,1529 @@
+[
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63173",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN A",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 11315",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN NS",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 2576",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 62317",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 47690",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 10373",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13147",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN A",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13766",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN A",
+          ";ANSWER",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59599",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN NS",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28992",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN NS",
+          ";ANSWER",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48637",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33940",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61744",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 36169",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37268",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60849",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19320",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6081",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.email.mybankcard.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4063",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN A",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "com.email.mybankcard.www. 500 IN CNAME com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9660",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.email.mybankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3561",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN NS",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "com.email.mybankcard.www. 500 IN CNAME com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 47990",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.email.mybankcard.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42752",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "com.email.mybankcard.www. 500 IN CNAME com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53284",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.email.mybankcard.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27606",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "com.email.mybankcard.www. 500 IN CNAME com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 2281",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.email.mybankcard.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48531",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "com.email.mybankcard.www. 500 IN CNAME com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 27913",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "com.email.mybankcard.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21011",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "com.email.mybankcard.www. 500 IN CNAME com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29769",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "com.email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51085",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN A",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33777",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN A",
+          ";ANSWER",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62709",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN NS",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60159",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN NS",
+          ";ANSWER",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27231",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25183",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54684",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25529",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48778",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 61356",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.com.email.mybankcard.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42978",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.com.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 40669",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.com.email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "com.email.mybankcard.www. 500 IN DNAME email.campus.www.",
+          "a.com.email.mybankcard.www. 500 IN CNAME a.email.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15802",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN A",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "email.mybankcard.www. 500 IN CNAME email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 46074",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 46811",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN NS",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "email.mybankcard.www. 500 IN CNAME email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30668",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2325",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "email.mybankcard.www. 500 IN CNAME email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 38190",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11977",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "email.mybankcard.www. 500 IN CNAME email.email.campus.campus.www.",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 847",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 26626",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "email.mybankcard.www. 500 IN CNAME email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 45873",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.mybankcard.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18324",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "email.mybankcard.www. 500 IN CNAME email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10317",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 10685",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.mybankcard.www. IN A",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.email.mybankcard.www. 500 IN CNAME a.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 23931",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.mybankcard.www. IN NS",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.email.mybankcard.www. 500 IN CNAME a.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 41574",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.email.mybankcard.www. 500 IN CNAME a.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 36659",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.email.mybankcard.www. 500 IN CNAME a.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 54236",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.email.mybankcard.www. 500 IN CNAME a.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.mybankcard.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 59219",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.email.mybankcard.www. 500 IN CNAME a.email.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 36824",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 29264",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.www. IN NS",
+          ";ANSWER",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 57429",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.www. IN SOA",
+          ";ANSWER",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 30562",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 3111",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 12177",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 20897",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN A",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 12490",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN NS",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 39925",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN SOA",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 60906",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN CNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          "mybankcard.www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 17561",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN DNAME",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 21617",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.www. IN TXT",
+          ";ANSWER",
+          "mybankcard.www. 500 IN DNAME email.campus.campus.www.",
+          "a.mybankcard.www. 500 IN CNAME a.email.campus.campus.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

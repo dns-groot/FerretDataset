@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "net.uni.net.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40769",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.uni.net.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.uni.net.foo. 500 IN NS uni.net.foo.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 40754",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.uni.net.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.uni.net.foo. 500 IN NS uni.net.foo.",
+          ";ADDITIONAL",
+          "uni.net.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

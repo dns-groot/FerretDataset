@@ -1,0 +1,37 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "63.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 63.txt:4: foo.example.net: multiple RRs of singleton type",
+      "zone foo.example.net/IN: loading from master file 63.txt failed: multiple RRs of singleton type",
+      "zone foo.example.net/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone foo.example.net. file 63.txt has 4 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[foo.example.net.] more records exist at CNAME",
+      "[foo.example.net.] multiple CNAME records",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "   1\tmultiple CNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Duplicate CNAME found at 'foo.example.net'",
+      "[Error] CNAME foo.example.net found, but other records with same label exist.",
+      "Checked 4 records of 'foo.example.net', 2 errors, 0 warnings."
+    ]
+  }
+}

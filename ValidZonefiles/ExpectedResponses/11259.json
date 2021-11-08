@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "example.net.fnni.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57862",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.net.fnni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.net.fnni. 500 IN NS uni.com.com.",
+          "example.net.fnni. 500 IN NS net.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 13655",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.net.fnni. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.net.fnni. 500 IN NS uni.com.com.",
+          "example.net.fnni. 500 IN NS net.fnni.",
+          ";ADDITIONAL",
+          "net.fnni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

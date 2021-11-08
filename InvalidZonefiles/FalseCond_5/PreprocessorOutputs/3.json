@@ -1,0 +1,34 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "3.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 3.txt:3: mybankcard.net.www: multiple RRs of singleton type",
+      "zone www/IN: loading from master file 3.txt failed: multiple RRs of singleton type",
+      "zone www/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone www. file 3.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[mybankcard.net.www.] multiple DNAME records",
+      "",
+      "Error summary:",
+      "   1\tmultiple DNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: email.fnni.net.www IN NS bankcard.mybankcard.net.uni",
+      "Checked 7 records of 'www', 1 errors, 0 warnings."
+    ]
+  }
+}

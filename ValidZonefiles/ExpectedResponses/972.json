@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "com.uni.*.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18721",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.uni.*.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.uni.*.bar. 500 IN NS bar.uni.*.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 61761",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.uni.*.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.uni.*.bar. 500 IN NS bar.uni.*.bar.",
+          ";ADDITIONAL",
+          "bar.uni.*.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

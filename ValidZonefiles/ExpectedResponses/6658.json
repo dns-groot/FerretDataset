@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "net.www.email.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 18770",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www.email.bank. IN DNAME",
+          ";ANSWER",
+          "net.www.email.bank. 500 IN DNAME www.email.bank.",
+          ";AUTHORITY",
+          "net.www.email.bank. 500 IN NS net.example.bank.com.",
+          "net.www.email.bank. 500 IN NS net.campus.email.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

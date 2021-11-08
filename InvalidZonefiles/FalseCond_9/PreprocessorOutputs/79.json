@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "79.txt:2: using RFC1035 TTL semantics",
+      "zone campus/IN: NS 'example.www.campus.campus' has no address records (A or AAAA)",
+      "zone campus/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone campus. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[campus.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] NS record in zone 'campus: non-hostname content example.com.bank.*.",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: foo.campus.campus IN NS example.com.bank.*",
+      "Checked 4 records of 'campus', 1 errors, 1 warnings."
+    ]
+  }
+}

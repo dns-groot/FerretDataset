@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "foo.foo.foo.bar.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59826",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.foo.foo.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.foo.foo.bar. 500 IN NS foo.foo.bar.",
+          "foo.foo.foo.bar. 500 IN NS bankcard.foo.mybankcard.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 44321",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.foo.foo.bar. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.foo.foo.bar. 500 IN NS bankcard.foo.mybankcard.bar.",
+          "foo.foo.foo.bar. 500 IN NS foo.foo.bar.",
+          ";ADDITIONAL",
+          "foo.foo.bar. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "72.txt:2: using RFC1035 TTL semantics",
+      "zone fnni.uni.bar/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone fnni.uni.bar. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[www.fnni.uni.bar.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'www.fnni.uni.bar|DNAME' in zone 'fnni.uni.bar' is occluded by a delegation at 'www.fnni.uni.bar'",
+      "[Warning] 'www.fnni.uni.bar|NS' in zone 'fnni.uni.bar' is occluded by a DNAME at 'www.fnni.uni.bar'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: www.fnni.uni.bar IN NS example.bank.net.bar",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: www.fnni.uni.bar IN DNAME fnni.*.bar",
+      "Checked 5 records of 'fnni.uni.bar', 2 errors, 2 warnings."
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "69.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 69.txt:3: net.fnni.foo: CNAME and other data",
+      "zone foo/IN: loading from master file 69.txt failed: CNAME and other data",
+      "zone foo/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone foo. file 69.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.fnni.foo.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME net.fnni.foo found, but other records with same label exist.",
+      "Checked 5 records of 'foo', 1 errors, 0 warnings."
+    ]
+  }
+}

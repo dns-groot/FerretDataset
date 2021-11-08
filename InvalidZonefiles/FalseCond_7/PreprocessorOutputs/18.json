@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "18.txt:2: using RFC1035 TTL semantics",
+      "zone campus/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone campus. file 18.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[com.uni.campus.] child record exists under DNAME",
+      "",
+      "Error summary:",
+      "   1\tchild record exists under DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 0,
+    "Output": [
+      "[Warning] 'www.com.uni.campus|CNAME' in zone 'campus' is occluded by a DNAME at 'com.uni.campus'",
+      "Checked 5 records of 'campus', 0 errors, 1 warnings."
+    ]
+  }
+}

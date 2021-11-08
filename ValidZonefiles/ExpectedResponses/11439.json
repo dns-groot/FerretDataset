@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "bar.bankcard.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55977",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.bankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.bankcard. 500 IN NS campus.bankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 17320",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.bankcard. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.bankcard. 500 IN NS campus.bankcard.",
+          ";ADDITIONAL",
+          "campus.bankcard. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

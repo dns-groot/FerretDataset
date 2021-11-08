@@ -1,0 +1,40 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "50.txt:1: warning: ownername 'campus.uni.*' contains an non-terminal wildcard",
+      "50.txt:2: warning: ownername 'net.campus.uni.*' contains an non-terminal wildcard",
+      "50.txt:2: using RFC1035 TTL semantics",
+      "50.txt:4: warning: ownername 'campus.uni.*' contains an non-terminal wildcard",
+      "zone campus.uni.*/IN: net.campus.uni.*/NS 'net.campus.uni.*' has no REQUIRED GLUE address records (A or AAAA)",
+      "zone campus.uni.*/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone campus.uni.*. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.campus.uni.*.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Info] campus.uni.*. record for 'A' is not a valid hostname.",
+      "[Warning] NS record in zone 'campus.uni.*: non-hostname content net.campus.uni.*.",
+      "[Warning] Missing glue for 'net.campus.uni.*' in zone 'campus.uni.*'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.campus.uni.* IN NS net.campus.uni.*",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.campus.uni.* IN NS fnni.campus",
+      "Checked 5 records of 'campus.uni.*', 2 errors, 2 warnings."
+    ]
+  }
+}

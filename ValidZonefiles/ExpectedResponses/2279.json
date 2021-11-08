@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "bank.*.www.campus.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 53691",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank.*.www.campus. IN A",
+          ";ANSWER",
+          "bank.*.www.campus. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          "bank.*.www.campus. 500 IN NS bankcard.fnni.www.campus.",
+          "bank.*.www.campus. 500 IN NS mybankcard.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

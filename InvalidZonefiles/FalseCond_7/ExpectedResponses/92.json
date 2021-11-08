@@ -1,0 +1,1302 @@
+[
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 17295",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14501",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19531",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61683",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62695",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36190",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.mybankcard.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8793",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.mybankcard.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.bankcard.mybankcard.email. 500 IN CNAME mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.mybankcard.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25110",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.mybankcard.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.bankcard.mybankcard.email. 500 IN CNAME mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.mybankcard.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30017",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.mybankcard.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.bankcard.mybankcard.email. 500 IN CNAME mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.mybankcard.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16855",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.mybankcard.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.bankcard.mybankcard.email. 500 IN CNAME mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.mybankcard.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64063",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.mybankcard.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.bankcard.mybankcard.email. 500 IN CNAME mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.mybankcard.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36057",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.bankcard.mybankcard.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.bankcard.mybankcard.email. 500 IN CNAME mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.mybankcard.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19844",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.mybankcard.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.bankcard.mybankcard.email. 500 IN CNAME a.mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.mybankcard.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 50289",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.mybankcard.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.bankcard.mybankcard.email. 500 IN CNAME a.mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.mybankcard.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 50269",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.mybankcard.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.bankcard.mybankcard.email. 500 IN CNAME a.mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.mybankcard.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49457",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.mybankcard.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.bankcard.mybankcard.email. 500 IN CNAME a.mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.mybankcard.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32844",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.mybankcard.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.bankcard.mybankcard.email. 500 IN CNAME a.mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.bankcard.mybankcard.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3189",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.bankcard.mybankcard.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.bankcard.mybankcard.email. 500 IN CNAME a.mybankcard.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.mybankcard.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6162",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.mybankcard.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "bankcard.mybankcard.email. 500 IN CNAME bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.mybankcard.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55144",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.mybankcard.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "bankcard.mybankcard.email. 500 IN CNAME bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.mybankcard.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62701",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.mybankcard.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "bankcard.mybankcard.email. 500 IN CNAME bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.mybankcard.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52940",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.mybankcard.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "bankcard.mybankcard.email. 500 IN CNAME bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.mybankcard.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44120",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.mybankcard.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "bankcard.mybankcard.email. 500 IN CNAME bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.mybankcard.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9345",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.mybankcard.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "bankcard.mybankcard.email. 500 IN CNAME bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.mybankcard.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20589",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.mybankcard.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.bankcard.mybankcard.email. 500 IN CNAME a.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.mybankcard.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55291",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.mybankcard.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.bankcard.mybankcard.email. 500 IN CNAME a.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.mybankcard.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23057",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.mybankcard.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.bankcard.mybankcard.email. 500 IN CNAME a.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.mybankcard.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9964",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.mybankcard.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.bankcard.mybankcard.email. 500 IN CNAME a.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.mybankcard.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 26744",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.mybankcard.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.bankcard.mybankcard.email. 500 IN CNAME a.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.mybankcard.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14552",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.mybankcard.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.bankcard.mybankcard.email. 500 IN CNAME a.bankcard.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5581",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.email. 500 IN CNAME mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25182",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.email. 500 IN CNAME mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23765",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.email. 500 IN CNAME mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7647",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.email. 500 IN CNAME mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49265",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.email. 500 IN CNAME mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "mybankcard.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14725",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "mybankcard.email. 500 IN CNAME mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 43840",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.email. 500 IN CNAME a.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1760",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.email. 500 IN CNAME a.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5255",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.email. 500 IN CNAME a.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23685",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.email. 500 IN CNAME a.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 794",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.email. 500 IN CNAME a.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.mybankcard.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3119",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.mybankcard.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.mybankcard.email. 500 IN CNAME a.mybankcard.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37186",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 63661",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN NS",
+          ";ANSWER",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25441",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23477",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 46905",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55895",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37161",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58907",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55557",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27880",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          "email. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1801",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11785",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME *.bankcard.mybankcard.bar.",
+          "a.email. 500 IN CNAME a.*.bankcard.mybankcard.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

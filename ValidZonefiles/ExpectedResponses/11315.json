@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "www.uni.www.mybankcard.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37502",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.uni.www.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.www.mybankcard. 500 IN NS uni.bank.bar.mybankcard.",
+          "uni.www.mybankcard. 500 IN NS bank.www.mybankcard.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 57211",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.uni.www.mybankcard. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.www.mybankcard. 500 IN NS uni.bank.bar.mybankcard.",
+          "uni.www.mybankcard. 500 IN NS bank.www.mybankcard.",
+          ";ADDITIONAL",
+          "bank.www.mybankcard. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

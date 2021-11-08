@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "com.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54809",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.com. 500 IN NS uni.*.email.",
+          "com.com. 500 IN NS com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 25101",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "com.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.com. 500 IN NS uni.*.email.",
+          "com.com. 500 IN NS com.",
+          ";ADDITIONAL",
+          "com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

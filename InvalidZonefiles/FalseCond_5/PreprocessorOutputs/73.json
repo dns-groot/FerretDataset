@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "73.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 73.txt:3: fnni.campus.email.campus: multiple RRs of singleton type",
+      "zone email.campus/IN: loading from master file 73.txt failed: multiple RRs of singleton type",
+      "zone email.campus/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone email.campus. file 73.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[fnni.campus.email.campus.] multiple DNAME records",
+      "",
+      "Error summary:",
+      "   1\tmultiple DNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 0,
+    "Output": [
+      "Checked 6 records of 'email.campus', 0 errors, 0 warnings."
+    ]
+  }
+}

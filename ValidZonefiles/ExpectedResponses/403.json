@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "net.foo.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 34319",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.foo.foo. IN CNAME",
+          ";ANSWER",
+          "net.foo.foo. 500 IN CNAME foo.",
+          ";AUTHORITY",
+          "foo.foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

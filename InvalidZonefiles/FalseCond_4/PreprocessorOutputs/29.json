@@ -1,0 +1,38 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "29.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 29.txt:2: bank.bar: CNAME and other data",
+      "dns_master_load: 29.txt:5: bank.bar: CNAME and other data",
+      "zone bank.bar/IN: loading from master file 29.txt failed: CNAME and other data",
+      "zone bank.bar/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone bank.bar. file 29.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bank.bar.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] NS record in zone 'bank.bar: non-hostname content email.bar.bank.*.",
+      "[Error] CNAME bank.bar found, but other records with same label exist.",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.bank.bar IN NS email.bar.bank.*",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.bank.bar IN NS bar.bar.bar",
+      "Checked 5 records of 'bank.bar', 3 errors, 1 warnings."
+    ]
+  }
+}

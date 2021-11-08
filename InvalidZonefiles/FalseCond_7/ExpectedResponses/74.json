@@ -1,0 +1,2182 @@
+[
+  {
+    "Query": {
+      "Name": "foo.fnni.bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60071",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 45911",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN A",
+          ";ANSWER",
+          "foo.fnni.bar.foo. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.fnni.bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13442",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 27228",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.fnni.bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38308",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37767",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.fnni.bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 46137",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18562",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.fnni.bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62274",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14626",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.fnni.bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48638",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3860",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.fnni.bar.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.fnni.bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41882",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 52385",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.fnni.bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37752",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 6033",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.fnni.bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23227",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16666",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.fnni.bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41514",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 31332",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.fnni.bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21592",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59902",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.fnni.bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38495",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10832",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.fnni.bar.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53296",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16524",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bar.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14856",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18818",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bar.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52405",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 31384",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bar.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11863",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55776",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bar.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45840",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 32244",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bar.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2124",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "fnni.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58325",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bar.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14182",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14472",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 26359",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9189",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54142",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 4227",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44859",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53529",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5739",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 22387",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10399",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 52868",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bar.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45807",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 38817",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33514",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60709",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9552",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48646",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29837",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 47024",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3135",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25587",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4153",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54067",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bar.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53953",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 24107",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7461",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39712",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54308",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5613",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42142",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18019",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39204",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 22240",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bar.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15069",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bar.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 38415",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bar.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29203",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14367",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 46686",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14177",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41464",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28776",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 35471",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54488",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12484",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8288",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39751",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12857",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 916",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 15695",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 52359",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 49856",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 23686",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 46554",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58677",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 45634",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 43367",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 64031",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4821",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9540",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38749",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12913",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6443",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 23423",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11096",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME foo.fnni.bar.foo.",
+          "a.foo. 500 IN CNAME a.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          "a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo. 500 IN CNAME a.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.fnni.bar.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25228",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

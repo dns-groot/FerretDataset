@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "54.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 54.txt:5: www.example.foo.uni: multiple RRs of singleton type",
+      "zone www.example.foo.uni/IN: loading from master file 54.txt failed: multiple RRs of singleton type",
+      "zone www.example.foo.uni/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone www.example.foo.uni. file 54.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[www.example.foo.uni.] multiple DNAME records",
+      "",
+      "Error summary:",
+      "   1\tmultiple DNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 0,
+    "Output": [
+      "Checked 5 records of 'www.example.foo.uni', 0 errors, 0 warnings."
+    ]
+  }
+}

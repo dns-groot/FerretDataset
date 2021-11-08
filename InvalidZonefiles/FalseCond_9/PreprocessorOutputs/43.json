@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "43.txt:2: using RFC1035 TTL semantics",
+      "zone example/IN: bank.net.net.example/NS 'net.example' has no address records (A or AAAA)",
+      "zone example/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone example. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bank.net.net.example.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bank.net.net.example IN NS net.example",
+      "Checked 5 records of 'example', 1 errors, 0 warnings."
+    ]
+  }
+}

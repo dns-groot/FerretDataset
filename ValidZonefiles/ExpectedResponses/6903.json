@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "campus.bar.fnni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 18747",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.bar.fnni. IN DNAME",
+          ";ANSWER",
+          "campus.bar.fnni. 500 IN DNAME fnni.campus.foo.fnni.",
+          ";AUTHORITY",
+          "campus.bar.fnni. 500 IN NS bank.foo.fnni.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

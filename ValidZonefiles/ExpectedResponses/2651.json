@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "foo.mybankcard.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 19442",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.mybankcard.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "mybankcard.bank. 500 IN NS mybankcard.",
+          "mybankcard.bank. 500 IN NS bar.com.com.mybankcard.",
+          "mybankcard.bank. 500 IN NS foo.com.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

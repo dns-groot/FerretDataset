@@ -1,0 +1,37 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "50.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 50.txt:3: net.com.foo.mybankcard: CNAME and other data",
+      "zone mybankcard/IN: loading from master file 50.txt failed: CNAME and other data",
+      "zone mybankcard/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone mybankcard. file 50.txt has 1 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.com.foo.mybankcard.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME net.com.foo.mybankcard found, but other records with same label exist.",
+      "[Warning] 'net.com.foo.mybankcard|CNAME' in zone 'mybankcard' is occluded by a delegation at 'net.com.foo.mybankcard'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.com.foo.mybankcard IN NS email.bank.mybankcard.foo",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.com.foo.mybankcard IN CNAME net.com.foo.mybankcard",
+      "Checked 6 records of 'mybankcard', 3 errors, 1 warnings."
+    ]
+  }
+}

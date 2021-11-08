@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "mybankcard.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 53108",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "mybankcard.uni. IN DNAME",
+          ";ANSWER",
+          "mybankcard.uni. 500 IN DNAME bank.mybankcard.uni.",
+          ";AUTHORITY",
+          "mybankcard.uni. 500 IN NS campus.",
+          "mybankcard.uni. 500 IN NS bankcard.foo.mybankcard.campus.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

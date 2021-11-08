@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "net.bank.campus.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 43134",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.bank.campus.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.bank.campus.foo. 500 IN NS bar.campus.foo.",
+          "net.bank.campus.foo. 500 IN NS bank.campus.foo.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 63829",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.bank.campus.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.bank.campus.foo. 500 IN NS bar.campus.foo.",
+          "net.bank.campus.foo. 500 IN NS bank.campus.foo.",
+          ";ADDITIONAL",
+          "bank.campus.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

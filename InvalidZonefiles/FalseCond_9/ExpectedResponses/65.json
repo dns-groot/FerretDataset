@@ -1,0 +1,433 @@
+[
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 18433",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN A",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 29131",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN NS",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 39711",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN SOA",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 21650",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN CNAME",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 28409",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN DNAME",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 41490",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN TXT",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.bank.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 45085",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.com. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.bank.com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.bank.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 61472",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.com. IN NS",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN NS uni.uni.bank.com.",
+          "uni.bank.com. 3600 IN NS uni.mybankcard.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.bank.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 50179",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.com. IN SOA",
+          ";ANSWER",
+          "uni.bank.com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "uni.bank.com. 3600 IN NS uni.uni.bank.com.",
+          "uni.bank.com. 3600 IN NS uni.mybankcard.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.bank.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 65295",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.bank.com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.bank.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 33630",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.com. IN DNAME",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          ";AUTHORITY",
+          "uni.bank.com. 3600 IN NS uni.uni.bank.com.",
+          "uni.bank.com. 3600 IN NS uni.mybankcard.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.bank.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 602",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.bank.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.bank.com. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 50436",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN A",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 17790",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN NS",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 42810",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN SOA",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 54188",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN CNAME",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 48776",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN DNAME",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.bank.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "nsd powerdns ",
+        "Response": [
+          "id 26337",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.bank.com. IN TXT",
+          ";ANSWER",
+          "uni.bank.com. 3600 IN DNAME fnni.uni.foo.com.",
+          "a.uni.bank.com. 3600 IN CNAME a.fnni.uni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

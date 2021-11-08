@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "email.net.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21061",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.net.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.net.www. 500 IN NS net.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 55145",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.net.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.net.www. 500 IN NS net.www.",
+          ";ADDITIONAL",
+          "net.www. 500 IN A 1.1.1.1",
+          "net.www. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

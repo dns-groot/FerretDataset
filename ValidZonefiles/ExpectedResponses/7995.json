@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "net.campus.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 49865",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.campus. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.campus. 500 IN NS www.campus.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 35079",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.campus. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.campus. 500 IN NS www.campus.",
+          ";ADDITIONAL",
+          "www.campus. 500 IN A 1.1.1.1",
+          "www.campus. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

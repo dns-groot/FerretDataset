@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "campus.campus.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27145",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.campus.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.example. 500 IN NS uni.campus.com.www.",
+          "campus.example. 500 IN NS example.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 64716",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.campus.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.example. 500 IN NS uni.campus.com.www.",
+          "campus.example. 500 IN NS example.",
+          ";ADDITIONAL",
+          "example. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

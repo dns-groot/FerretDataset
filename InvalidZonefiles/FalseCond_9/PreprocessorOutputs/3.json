@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "3.txt:2: using RFC1035 TTL semantics",
+      "zone www.bankcard/IN: email.email.www.bankcard/NS 'www.bankcard' has no address records (A or AAAA)",
+      "zone www.bankcard/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone www.bankcard. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[email.email.www.bankcard.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: email.email.www.bankcard IN NS www.bankcard",
+      "Checked 4 records of 'www.bankcard', 1 errors, 0 warnings."
+    ]
+  }
+}

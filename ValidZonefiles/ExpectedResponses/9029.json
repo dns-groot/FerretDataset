@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.www.uni.net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 7",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www.uni.net. IN DNAME",
+          ";ANSWER",
+          "bankcard.www.uni.net. 500 IN DNAME bankcard.www.uni.*.",
+          ";AUTHORITY",
+          "bankcard.www.uni.net. 500 IN NS www.uni.net.",
+          "bankcard.www.uni.net. 500 IN NS mybankcard.mybankcard.uni.*.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

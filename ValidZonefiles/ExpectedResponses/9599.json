@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "foo.com.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 43299",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.com. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.com. 500 IN NS mybankcard.foo.com.",
+          "foo.com. 500 IN NS mybankcard.foo.*.",
+          ";ADDITIONAL",
+          "mybankcard.foo.com. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

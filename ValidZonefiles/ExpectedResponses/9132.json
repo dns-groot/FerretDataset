@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "example.uni.net.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 564",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.uni. IN DNAME",
+          ";ANSWER",
+          "example.uni.net.uni. 500 IN DNAME bank.net.fnni.",
+          ";AUTHORITY",
+          "example.uni.net.uni. 500 IN NS example.uni.net.uni.",
+          ";ADDITIONAL",
+          "example.uni.net.uni. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      },
+      {
+        "Server/s": "knot powerdns ",
+        "Response": [
+          "id 50663",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.uni. IN DNAME",
+          ";ANSWER",
+          "example.uni.net.uni. 500 IN DNAME bank.net.fnni.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

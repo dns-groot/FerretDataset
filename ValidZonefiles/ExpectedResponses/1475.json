@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "mybankcard.bankcard.com.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44065",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "mybankcard.bankcard.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.com. 500 IN NS *.example.bankcard.bankcard.",
+          "bankcard.com. 500 IN NS com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 59306",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "mybankcard.bankcard.com. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bankcard.com. 500 IN NS com.",
+          "bankcard.com. 500 IN NS *.example.bankcard.bankcard.",
+          ";ADDITIONAL",
+          "com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

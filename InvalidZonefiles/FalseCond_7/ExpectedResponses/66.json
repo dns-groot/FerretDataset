@@ -1,0 +1,3002 @@
+[
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 2434",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 30201",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 37919",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 59031",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 18206",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 16213",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57724",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9078",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34605",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 52031",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12856",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43344",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52135",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18249",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57157",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5188",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38619",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9418",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60912",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN CNAME campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 17133",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4964",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN CNAME campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39613",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13768",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN CNAME campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12416",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57863",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN CNAME campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12584",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 63264",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN CNAME campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 61996",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59043",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN CNAME campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26224",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42503",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43076",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12109",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53424",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48050",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 65237",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1086",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3188",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5825",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15192",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62308",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20483",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "a.campus.campus.fnni.bank. 500 IN CNAME a.net.campus.fnni.bank.",
+          "campus.campus.fnni.bank. 500 IN DNAME net.campus.fnni.bank.",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.campus.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 44622",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "net.campus.fnni.bank. 500 IN CNAME net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.campus.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 11055",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "net.campus.fnni.bank. 500 IN CNAME net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.campus.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 39048",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "net.campus.fnni.bank. 500 IN CNAME net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.campus.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 55870",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "net.campus.fnni.bank. 500 IN CNAME net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.campus.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 12047",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "net.campus.fnni.bank. 500 IN CNAME net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.campus.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 2096",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "net.campus.fnni.bank. 500 IN CNAME net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.campus.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 30167",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.campus.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 51905",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.campus.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 37129",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.campus.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 43836",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.campus.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 28992",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.campus.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 7043",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.net.campus.fnni.bank. 500 IN CNAME a.net.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13950",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.fnni.bank. 500 IN CNAME campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5272",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29496",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.fnni.bank. 500 IN CNAME campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9417",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 22351",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.fnni.bank. 500 IN CNAME campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26765",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34222",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.fnni.bank. 500 IN CNAME campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55481",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2156",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.fnni.bank. 500 IN CNAME campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7043",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61558",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "campus.fnni.bank. 500 IN CNAME campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25513",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 43368",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 53870",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 55658",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 30354",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 37284",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 43020",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.campus.fnni.bank. 500 IN CNAME a.campus.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 34788",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 21286",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 28315",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 15330",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 30326",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 44220",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "fnni.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 62047",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN A",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 13453",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN NS",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63471",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN SOA",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 62231",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN CNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 53564",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN DNAME",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.fnni.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 42096",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.fnni.bank. IN TXT",
+          ";ANSWER",
+          "fnni.bank. 500 IN DNAME campus.campus.net.bank.",
+          "a.fnni.bank. 500 IN CNAME a.campus.campus.net.bank.",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.net.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 62948",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.net.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.net.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 20146",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.net.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.net.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 39607",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.net.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.net.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63005",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.net.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.net.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 49928",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.net.bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.campus.net.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 5725",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.campus.net.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.net.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 22228",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.net.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.net.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 46004",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.net.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.net.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 35735",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.net.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.net.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 45027",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.net.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.net.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 7105",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.net.bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.campus.net.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 7986",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.campus.net.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 47591",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 40174",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 56334",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 53373",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 59802",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net.bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "campus.net.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 35818",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "campus.net.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 42575",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 4240",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 26640",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 49428",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 19962",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net.bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.campus.net.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 6748",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.campus.net.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 38051",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 24029",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 19402",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 53692",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 36931",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 49453",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "net.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 4679",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 22103",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 60953",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 50320",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 20431",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 12694",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 52498",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 29304",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank. IN NS",
+          ";ANSWER",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 65535",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank. IN SOA",
+          ";ANSWER",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "bank. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 43240",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 31564",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 37447",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 38314",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 43901",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 63595",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 0 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 12446",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 27437",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bank.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 8843",
+          "opcode QUERY",
+          "rcode NXDOMAIN",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bank. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

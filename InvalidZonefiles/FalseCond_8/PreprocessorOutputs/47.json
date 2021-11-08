@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "47.txt:2: using RFC1035 TTL semantics",
+      "zone com/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone com. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'example.mybankcard.mybankcard.com|CNAME' in zone 'com' is occluded by a delegation at 'mybankcard.mybankcard.com'",
+      "[Warning] 'mybankcard.mybankcard.mybankcard.com|NS' in zone 'com' is occluded by a delegation at 'mybankcard.mybankcard.com'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: mybankcard.mybankcard.com IN NS bank",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: example.mybankcard.mybankcard.com IN CNAME campus",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: mybankcard.mybankcard.mybankcard.com IN NS mybankcard.mybankcard.mybankcard.bank",
+      "Checked 6 records of 'com', 3 errors, 2 warnings."
+    ]
+  }
+}

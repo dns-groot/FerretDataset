@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "campus.email.example.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19716",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.email.example.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.email.example.bar. 500 IN NS email.example.bar.",
+          "campus.email.example.bar. 500 IN NS email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 49515",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.email.example.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.email.example.bar. 500 IN NS email.bar.",
+          "campus.email.example.bar. 500 IN NS email.example.bar.",
+          ";ADDITIONAL",
+          "email.example.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

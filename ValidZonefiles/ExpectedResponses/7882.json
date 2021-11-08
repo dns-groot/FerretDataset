@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "net.bar.www.email.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54246",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.bar.www.email. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.bar.www.email. 500 IN NS com.net.",
+          "net.bar.www.email. 500 IN NS *.bar.www.email.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 42521",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.bar.www.email. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.bar.www.email. 500 IN NS com.net.",
+          "net.bar.www.email. 500 IN NS *.bar.www.email.",
+          ";ADDITIONAL",
+          "*.bar.www.email. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

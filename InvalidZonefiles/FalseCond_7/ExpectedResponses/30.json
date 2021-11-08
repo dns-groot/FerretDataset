@@ -1,0 +1,2120 @@
+[
+  {
+    "Query": {
+      "Name": "bankcard.www.email.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20678",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.www.email.example. IN A",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 11875",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www.email.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.www.email.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30210",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.www.email.example. IN NS",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14187",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www.email.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.www.email.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19413",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.www.email.example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44790",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www.email.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.www.email.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34551",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www.email.example. IN CNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7946",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www.email.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.www.email.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5465",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.www.email.example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13744",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www.email.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.www.email.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 157",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.www.email.example. IN TXT",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57445",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.www.email.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.www.email.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52458",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN A",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16362",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.www.email.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14752",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN NS",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14183",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.www.email.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23122",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62332",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.www.email.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60727",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN CNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 197",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.www.email.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12184",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39067",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.www.email.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53431",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN TXT",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 22142",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.www.email.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.email.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6063",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.email.example. IN A",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "www.email.example. 500 IN CNAME www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8160",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.email.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.email.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40456",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.email.example. IN NS",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "www.email.example. 500 IN CNAME www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12710",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.email.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.email.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30628",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.email.example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "www.email.example. 500 IN CNAME www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54218",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.email.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.email.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62191",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.email.example. IN CNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "www.email.example. 500 IN CNAME www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 46292",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.email.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.email.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25006",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.email.example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "www.email.example. 500 IN CNAME www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28568",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.email.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.email.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 43343",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.email.example. IN TXT",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "www.email.example. 500 IN CNAME www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 17373",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.email.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.email.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10080",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.email.example. IN A",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54512",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.email.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.email.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37890",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.email.example. IN NS",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15132",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.email.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.email.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16223",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.email.example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9592",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.email.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.email.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59371",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.email.example. IN CNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58914",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.email.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.email.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40752",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.email.example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35531",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.email.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.email.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13757",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.email.example. IN TXT",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 31174",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.email.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36604",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "email.example. IN A",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "email.example. 500 IN CNAME email.bankcard.www.email.example.",
+          "email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 34826",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.example. IN A",
+          ";ANSWER",
+          "email.example. 500 IN CNAME bankcard.www.email.campus.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58809",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "email.example. IN NS",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "email.example. 500 IN CNAME email.bankcard.www.email.example.",
+          "email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 60160",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.example. IN NS",
+          ";ANSWER",
+          "email.example. 500 IN CNAME bankcard.www.email.campus.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33929",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "email.example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "email.example. 500 IN CNAME email.bankcard.www.email.example.",
+          "email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 2203",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.example. IN SOA",
+          ";ANSWER",
+          "email.example. 500 IN CNAME bankcard.www.email.campus.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8176",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.example. IN CNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "email.example. 500 IN CNAME email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 40379",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.example. IN CNAME",
+          ";ANSWER",
+          "email.example. 500 IN CNAME bankcard.www.email.campus.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36073",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "email.example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "email.example. 500 IN CNAME email.bankcard.www.email.example.",
+          "email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37726",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.example. IN DNAME",
+          ";ANSWER",
+          "email.example. 500 IN CNAME bankcard.www.email.campus.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12372",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "email.example. IN TXT",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "email.example. 500 IN CNAME email.bankcard.www.email.example.",
+          "email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 51795",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.example. IN TXT",
+          ";ANSWER",
+          "email.example. 500 IN CNAME bankcard.www.email.campus.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39105",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email.example. IN A",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.email.example. 500 IN CNAME a.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 21808",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32155",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email.example. IN NS",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.email.example. 500 IN CNAME a.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 52988",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34729",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email.example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.email.example. 500 IN CNAME a.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26897",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28065",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.example. IN CNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.email.example. 500 IN CNAME a.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 21594",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21797",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email.example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.email.example. 500 IN CNAME a.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 24136",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13403",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email.example. IN TXT",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.email.example. 500 IN CNAME a.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3408",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 17901",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN A",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35773",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7597",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN NS",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33731",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58373",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 19342",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52596",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN CNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55335",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 26577",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 40108",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9476",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN TXT",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62484",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 31958",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 833",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example. IN NS",
+          ";ANSWER",
+          "example. 500 IN NS www.email.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 14594",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 38908",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 29584",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 21123",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21957",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN A",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39416",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29888",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN NS",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3398",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11974",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN SOA",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 36154",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13155",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN CNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          ";AUTHORITY",
+          "example. 500 IN NS www.email.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28152",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39148",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN DNAME",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 2762",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3249",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example. IN TXT",
+          ";ANSWER",
+          "example. 500 IN DNAME bankcard.www.email.example.",
+          "a.example. 500 IN CNAME a.bankcard.www.email.example.",
+          "a.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          "a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example. 500 IN CNAME a.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.bankcard.www.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 19935",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

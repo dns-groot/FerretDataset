@@ -1,0 +1,39 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "28.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 28.txt:2: com.fnni: CNAME and other data",
+      "dns_master_load: 28.txt:4: bank.com.fnni: CNAME and other data",
+      "dns_master_load: 28.txt:5: com.fnni: CNAME and other data",
+      "zone com.fnni/IN: loading from master file 28.txt failed: CNAME and other data",
+      "zone com.fnni/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone com.fnni. file 28.txt has 4 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[com.fnni.] more records exist at CNAME",
+      "[bank.com.fnni.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   2\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME com.fnni found, but other records with same label exist.",
+      "[Error] CNAME bank.com.fnni found, but other records with same label exist.",
+      "[Warning] 'bank.com.fnni|CNAME' in zone 'com.fnni' is occluded by a DNAME at 'bank.com.fnni'",
+      "Checked 5 records of 'com.fnni', 2 errors, 1 warnings."
+    ]
+  }
+}

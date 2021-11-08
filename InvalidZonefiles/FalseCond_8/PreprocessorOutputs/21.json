@@ -1,0 +1,31 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "21.txt:2: using RFC1035 TTL semantics",
+      "zone campus/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone campus. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'campus.bankcard.mybankcard.campus|NS' in zone 'campus' is occluded by a delegation at 'mybankcard.campus'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: mybankcard.campus IN NS uni.fnni.campus.bankcard",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: campus.bankcard.mybankcard.campus IN NS bankcard.com.fnni.bank",
+      "Checked 5 records of 'campus', 2 errors, 1 warnings."
+    ]
+  }
+}

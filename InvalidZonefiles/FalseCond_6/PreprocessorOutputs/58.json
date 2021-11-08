@@ -1,0 +1,38 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "58.txt:2: using RFC1035 TTL semantics",
+      "zone email/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone email. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[com.bank.email.email.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'com.bank.email.email|DNAME' in zone 'email' is occluded by a delegation at 'com.bank.email.email'",
+      "[Warning] 'com.bank.email.email|NS' in zone 'email' is occluded by a DNAME at 'com.bank.email.email'",
+      "[Warning] 'com.bank.email.email|NS' in zone 'email' is occluded by a DNAME at 'com.bank.email.email'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: com.bank.email.email IN NS email.bank",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: com.bank.email.email IN DNAME com.bank.email.uni",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: com.bank.email.email IN NS bank.email.uni",
+      "Checked 7 records of 'email', 3 errors, 3 warnings."
+    ]
+  }
+}

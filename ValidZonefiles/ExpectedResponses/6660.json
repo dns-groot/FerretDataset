@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "email.com.com.mybankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd ",
+        "Response": [
+          "id 49926",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.com.com.mybankcard. IN SOA",
+          ";ANSWER",
+          "email.com.com.mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 604800 86400 2419200 604800",
+          ";AUTHORITY",
+          "email.com.com.mybankcard. 500 IN NS email.com.com.mybankcard.",
+          ";ADDITIONAL",
+          "email.com.com.mybankcard. 500 IN A 1.1.1.1"
+        ]
+      },
+      {
+        "Server/s": "knot powerdns ",
+        "Response": [
+          "id 37730",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.com.com.mybankcard. IN SOA",
+          ";ANSWER",
+          "email.com.com.mybankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 604800 86400 2419200 604800",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

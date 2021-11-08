@@ -1,0 +1,31 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "48.txt:2: using RFC1035 TTL semantics",
+      "zone foo.foo.bank/IN: NS 'fnni.foo.foo.bank' has no address records (A or AAAA)",
+      "zone foo.foo.bank/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone foo.foo.bank. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[foo.foo.bank.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 0,
+    "Output": [
+      "Checked 4 records of 'foo.foo.bank', 0 errors, 0 warnings."
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "example.email.fnni.com.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 41933",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.email.fnni.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.email.fnni.com. 500 IN NS com.",
+          "example.email.fnni.com. 500 IN NS email.fnni.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 34337",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "example.email.fnni.com. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "example.email.fnni.com. 500 IN NS com.",
+          "example.email.fnni.com. 500 IN NS email.fnni.com.",
+          ";ADDITIONAL",
+          "email.fnni.com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

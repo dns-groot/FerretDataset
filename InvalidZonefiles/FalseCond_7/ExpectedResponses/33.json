@@ -1,0 +1,3169 @@
+[
+  {
+    "Query": {
+      "Name": "*.bankcard.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1965",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "*.bankcard.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "*.bankcard.foo. 500 IN CNAME *.bankcard.example.www.www.foo.",
+          "*.bankcard.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7780",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.bankcard.foo. IN A",
+          ";ANSWER",
+          "*.bankcard.foo. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.bankcard.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20326",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "*.bankcard.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "*.bankcard.foo. 500 IN CNAME *.bankcard.example.www.www.foo.",
+          "*.bankcard.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 681",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.bankcard.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.bankcard.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4964",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "*.bankcard.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "*.bankcard.foo. 500 IN CNAME *.bankcard.example.www.www.foo.",
+          "*.bankcard.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25321",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.bankcard.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.bankcard.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52396",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.bankcard.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "*.bankcard.foo. 500 IN CNAME *.bankcard.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 19512",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.bankcard.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.bankcard.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40214",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "*.bankcard.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "*.bankcard.foo. 500 IN CNAME *.bankcard.example.www.www.foo.",
+          "*.bankcard.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63938",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.bankcard.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "*.bankcard.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5958",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "*.bankcard.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "*.bankcard.foo. 500 IN CNAME *.bankcard.example.www.www.foo.",
+          "*.bankcard.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME *.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 24400",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "*.bankcard.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.bankcard.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64948",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.*.bankcard.foo. 500 IN CNAME a.*.bankcard.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16788",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.bankcard.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 35777",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.*.bankcard.foo. 500 IN CNAME a.*.bankcard.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56345",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.bankcard.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55198",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.*.bankcard.foo. 500 IN CNAME a.*.bankcard.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26023",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.bankcard.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 46978",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.*.bankcard.foo. 500 IN CNAME a.*.bankcard.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20147",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.bankcard.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 56951",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.*.bankcard.foo. 500 IN CNAME a.*.bankcard.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26733",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.*.bankcard.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14473",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.*.bankcard.foo. 500 IN CNAME a.*.bankcard.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.*.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 42860",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.*.bankcard.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48815",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "bankcard.foo. 500 IN CNAME bankcard.example.www.www.foo.",
+          "bankcard.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12831",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58564",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "bankcard.foo. 500 IN CNAME bankcard.example.www.www.foo.",
+          "bankcard.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15332",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64676",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "bankcard.foo. 500 IN CNAME bankcard.example.www.www.foo.",
+          "bankcard.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3117",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 17278",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "bankcard.foo. 500 IN CNAME bankcard.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 46608",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 56885",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "bankcard.foo. 500 IN CNAME bankcard.example.www.www.foo.",
+          "bankcard.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62250",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "bankcard.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9261",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "bankcard.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "bankcard.foo. 500 IN CNAME bankcard.example.www.www.foo.",
+          "bankcard.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 26825",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "bankcard.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52752",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.bankcard.foo. 500 IN CNAME a.bankcard.example.www.www.foo.",
+          "a.bankcard.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5607",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.foo. IN A",
+          ";ANSWER",
+          "a.bankcard.foo. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 38929",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.bankcard.foo. 500 IN CNAME a.bankcard.example.www.www.foo.",
+          "a.bankcard.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 15245",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 22586",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.bankcard.foo. 500 IN CNAME a.bankcard.example.www.www.foo.",
+          "a.bankcard.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39356",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5420",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.bankcard.foo. 500 IN CNAME a.bankcard.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43572",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8308",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.bankcard.foo. 500 IN CNAME a.bankcard.example.www.www.foo.",
+          "a.bankcard.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37719",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.bankcard.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6737",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.bankcard.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.bankcard.foo. 500 IN CNAME a.bankcard.example.www.www.foo.",
+          "a.bankcard.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.bankcard.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18460",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.bankcard.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.www.www.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16043",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.www.www.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54417",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.www.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.www.www.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45501",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.www.www.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29849",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.www.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.www.www.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 37567",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.www.www.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25671",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.www.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.www.www.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40917",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.www.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 24434",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.www.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.www.www.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11523",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.www.www.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37221",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.www.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.www.www.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19840",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.www.www.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10247",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.www.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.www.www.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 8685",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.www.www.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 17864",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.www.www.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.www.www.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44701",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.www.www.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44596",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.www.www.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.www.www.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47537",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.www.www.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58142",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.www.www.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.www.www.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47447",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.www.www.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25350",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.www.www.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.www.www.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39063",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.www.www.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3568",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.www.www.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.www.www.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 48256",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.www.www.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 47133",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.www.www.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.www.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11316",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.www.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.www.foo. 500 IN CNAME www.www.example.www.www.foo.",
+          "www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9132",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.www.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.www.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51702",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.www.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.www.foo. 500 IN CNAME www.www.example.www.www.foo.",
+          "www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 22932",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.www.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.www.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20074",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.www.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.www.foo. 500 IN CNAME www.www.example.www.www.foo.",
+          "www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10000",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.www.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.www.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54568",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.www.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.www.foo. 500 IN CNAME www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58536",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.www.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.www.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61133",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.www.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.www.foo. 500 IN CNAME www.www.example.www.www.foo.",
+          "www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 5107",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.www.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.www.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 60833",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.www.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.www.foo. 500 IN CNAME www.www.example.www.www.foo.",
+          "www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35097",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "www.www.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.www.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13506",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.www.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.www.foo. 500 IN CNAME a.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44072",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.www.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.www.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4443",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.www.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.www.foo. 500 IN CNAME a.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3882",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.www.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.www.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29450",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.www.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.www.foo. 500 IN CNAME a.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 21597",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.www.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.www.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61471",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.www.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.www.foo. 500 IN CNAME a.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 27359",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.www.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.www.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36852",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.www.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.www.foo. 500 IN CNAME a.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55880",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.www.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.www.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 57199",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.www.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.www.foo. 500 IN CNAME a.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 34895",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.www.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2389",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.foo. 500 IN CNAME www.example.www.www.foo.",
+          "www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 53280",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.foo. IN A",
+          ";ANSWER",
+          "www.foo. 500 IN CNAME example.www.www.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 356",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.foo. 500 IN CNAME www.example.www.www.foo.",
+          "www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8722",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.foo. IN NS",
+          ";ANSWER",
+          "www.foo. 500 IN CNAME example.www.www.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33913",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.foo. 500 IN CNAME www.example.www.www.foo.",
+          "www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37623",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.foo. IN SOA",
+          ";ANSWER",
+          "www.foo. 500 IN CNAME example.www.www.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59473",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.foo. 500 IN CNAME www.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58529",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.foo. IN CNAME",
+          ";ANSWER",
+          "www.foo. 500 IN CNAME example.www.www.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 27691",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.foo. 500 IN CNAME www.example.www.www.foo.",
+          "www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 59598",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.foo. IN DNAME",
+          ";ANSWER",
+          "www.foo. 500 IN CNAME example.www.www.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20913",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "www.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "www.foo. 500 IN CNAME www.example.www.www.foo.",
+          "www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 65424",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www.foo. IN TXT",
+          ";ANSWER",
+          "www.foo. 500 IN CNAME example.www.www.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2807",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.foo. 500 IN CNAME a.www.example.www.www.foo.",
+          "a.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30197",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2609",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.foo. 500 IN CNAME a.www.example.www.www.foo.",
+          "a.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37959",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25480",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.foo. 500 IN CNAME a.www.example.www.www.foo.",
+          "a.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 45156",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44941",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.foo. 500 IN CNAME a.www.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 40797",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 17290",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.foo. 500 IN CNAME a.www.example.www.www.foo.",
+          "a.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13474",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53806",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.www.foo. 500 IN CNAME a.www.example.www.www.foo.",
+          "a.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37760",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28749",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28337",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10509",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25467",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 663",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30499",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25001",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44276",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18129",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 65101",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34266",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 19283",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 16200",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 60902",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 32276",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 6810",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 37376",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 16685",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 56739",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48066",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 33567",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57391",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 56666",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18693",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 11294",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          ";AUTHORITY",
+          "foo. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 31956",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3825",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55240",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21393",
+          "opcode QUERY",
+          "rcode YXDOMAIN",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          "foo. 500 IN DNAME example.www.www.foo.",
+          "a.foo. 500 IN CNAME a.example.www.www.foo.",
+          "a.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          "a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo. 500 IN CNAME a.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.example.www.www.foo.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 57488",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

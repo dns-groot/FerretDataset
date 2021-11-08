@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "campus.foo.foo.bar.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 33033",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "campus.foo.foo.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "campus.foo.foo.bar. 500 IN NS mybankcard.bar.",
+          "campus.foo.foo.bar. 500 IN NS campus.foo.foo.bar.",
+          ";ADDITIONAL",
+          "campus.foo.foo.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

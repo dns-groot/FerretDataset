@@ -1,0 +1,82 @@
+[
+  {
+    "Query": {
+      "Name": "example.www.example.bar.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58394",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.www.example.bar. IN NS",
+          ";ANSWER",
+          "bar. 500 IN DNAME www.bar.bar.",
+          "example.www.example.bar. 500 IN CNAME example.www.example.www.bar.bar.",
+          "example.www.example.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.bar.",
+          "example.www.example.www.bar.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.www.bar.bar.",
+          "example.www.example.www.bar.www.bar.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.www.bar.www.bar.bar.",
+          "example.www.example.www.bar.www.bar.www.bar.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.www.bar.www.bar.www.bar.bar.",
+          "example.www.example.www.bar.www.bar.www.bar.www.bar.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.www.bar.www.bar.www.bar.www.bar.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 43021",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.example.bar. IN NS",
+          ";ANSWER",
+          "bar. 500 IN DNAME www.bar.bar.",
+          "example.www.example.bar. 500 IN CNAME example.www.example.www.bar.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 38257",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.example.bar. IN NS",
+          ";ANSWER",
+          "bar. 500 IN DNAME www.bar.bar.",
+          "example.www.example.bar. 500 IN CNAME example.www.example.www.bar.bar.",
+          "example.www.example.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.bar.",
+          "example.www.example.www.bar.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.www.bar.bar.",
+          "example.www.example.www.bar.www.bar.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.www.bar.www.bar.bar.",
+          "example.www.example.www.bar.www.bar.www.bar.www.bar.bar. 500 IN CNAME example.www.example.www.bar.www.bar.www.bar.www.bar.www.bar.bar.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10355",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "example.www.example.bar. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "D1"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "uni.com.fnni.foo.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2762",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.com.fnni.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.foo. 500 IN NS foo.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 5186",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "uni.com.fnni.foo. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.foo. 500 IN NS foo.",
+          ";ADDITIONAL",
+          "foo. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

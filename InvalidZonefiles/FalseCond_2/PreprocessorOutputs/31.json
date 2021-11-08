@@ -1,0 +1,30 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "31.txt:3: ignoring out-of-zone data (bankcard.foo.mybankcard)",
+      "31.txt:4: using RFC1035 TTL semantics",
+      "zone fnni.www.foo.mybankcard/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone fnni.www.foo.mybankcard. file 31.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "warning: [fnni.www.foo.mybankcard.] zone loader, ignoring out-of-zone data, owner bankcard.foo.mybankcard.",
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      ""
+    ]
+  }
+}

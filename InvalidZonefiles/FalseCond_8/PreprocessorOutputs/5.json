@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "5.txt:2: using RFC1035 TTL semantics",
+      "zone mybankcard/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone mybankcard. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'com.email.mybankcard.mybankcard|DNAME' in zone 'mybankcard' is occluded by a delegation at 'email.mybankcard.mybankcard'",
+      "[Warning] 'fnni.email.mybankcard.mybankcard|NS' in zone 'mybankcard' is occluded by a delegation at 'email.mybankcard.mybankcard'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: email.mybankcard.mybankcard IN NS mybankcard.campus",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: com.email.mybankcard.mybankcard IN DNAME fnni.email.mybankcard.bank",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: fnni.email.mybankcard.mybankcard IN NS bankcard",
+      "Checked 6 records of 'mybankcard', 3 errors, 2 warnings."
+    ]
+  }
+}

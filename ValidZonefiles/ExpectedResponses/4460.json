@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "net.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 32028",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net. IN DNAME",
+          ";ANSWER",
+          "net. 500 IN DNAME bar.bar.campus.net.",
+          ";AUTHORITY",
+          "net. 500 IN NS bar.bar.uni.bankcard.",
+          "net. 500 IN NS example.foo.uni.fnni.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

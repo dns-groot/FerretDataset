@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "15.txt:2: using RFC1035 TTL semantics",
+      "zone example.example/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone example.example. file 15.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bankcard.example.example.] child record exists under DNAME",
+      "",
+      "Error summary:",
+      "   1\tchild record exists under DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 0,
+    "Output": [
+      "[Warning] 'foo.bankcard.example.example|DNAME' in zone 'example.example' is occluded by a DNAME at 'bankcard.example.example'",
+      "Checked 4 records of 'example.example', 0 errors, 1 warnings."
+    ]
+  }
+}

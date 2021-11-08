@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "foo.bank.example.bar.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 31635",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.bank.example.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.example.bar. 500 IN NS foo.example.bar.",
+          "bank.example.bar. 500 IN NS com.foo.foo.bar.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 28786",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.bank.example.bar. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bank.example.bar. 500 IN NS com.foo.foo.bar.",
+          "bank.example.bar. 500 IN NS foo.example.bar.",
+          ";ADDITIONAL",
+          "foo.example.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

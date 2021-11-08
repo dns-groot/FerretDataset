@@ -1,0 +1,37 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "13.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 13.txt:4: uni.email: multiple RRs of singleton type",
+      "zone uni.email/IN: loading from master file 13.txt failed: multiple RRs of singleton type",
+      "zone uni.email/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone uni.email. file 13.txt has 4 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[uni.email.] more records exist at CNAME",
+      "[uni.email.] multiple CNAME records",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "   1\tmultiple CNAME records",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Duplicate CNAME found at 'uni.email'",
+      "[Error] CNAME uni.email found, but other records with same label exist.",
+      "Checked 4 records of 'uni.email', 2 errors, 0 warnings."
+    ]
+  }
+}

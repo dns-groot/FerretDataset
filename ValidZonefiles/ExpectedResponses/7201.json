@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "foo.bar.mybankcard.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 53924",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.bar.mybankcard.email. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.mybankcard.email. 500 IN NS email.email.",
+          "bar.mybankcard.email. 500 IN NS bar.mybankcard.example.",
+          "bar.mybankcard.email. 500 IN NS bar.mybankcard.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

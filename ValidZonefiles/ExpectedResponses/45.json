@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.net.*.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34449",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.net.*.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.*.www. 500 IN NS *.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 14999",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.net.*.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.*.www. 500 IN NS *.www.",
+          ";ADDITIONAL",
+          "*.www. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

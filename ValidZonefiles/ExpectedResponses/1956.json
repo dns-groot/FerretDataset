@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "email.net.bankcard.net.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42860",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.net.bankcard.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.net.bankcard.net. 500 IN NS net.bankcard.net.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 18020",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "email.net.bankcard.net. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.net.bankcard.net. 500 IN NS net.bankcard.net.",
+          ";ADDITIONAL",
+          "net.bankcard.net. 500 IN A 1.1.1.1",
+          "net.bankcard.net. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

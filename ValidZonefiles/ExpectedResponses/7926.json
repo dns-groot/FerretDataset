@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "www.foo.foo.bar.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 39296",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.foo.foo.bar. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www.foo.foo.bar. 500 IN NS net.campus.foo.bar.",
+          "www.foo.foo.bar. 500 IN NS www.foo.foo.bar.",
+          ";ADDITIONAL",
+          "www.foo.foo.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "71.txt:2: using RFC1035 TTL semantics",
+      "zone bank.fnni.www/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone bank.fnni.www. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[mybankcard.bank.fnni.www.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'mybankcard.bank.fnni.www|DNAME' in zone 'bank.fnni.www' is occluded by a delegation at 'mybankcard.bank.fnni.www'",
+      "[Warning] 'mybankcard.bank.fnni.www|NS' in zone 'bank.fnni.www' is occluded by a DNAME at 'mybankcard.bank.fnni.www'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: mybankcard.bank.fnni.www IN DNAME mybankcard.bank.fnni.fnni",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: mybankcard.bank.fnni.www IN NS bank.example.www",
+      "Checked 5 records of 'bank.fnni.www', 2 errors, 2 warnings."
+    ]
+  }
+}

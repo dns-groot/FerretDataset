@@ -1,0 +1,39 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "12.txt:2: warning: ownername 'bankcard.*.foo.mybankcard' contains an non-terminal wildcard",
+      "12.txt:2: using RFC1035 TTL semantics",
+      "zone mybankcard/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone mybankcard. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[email.mybankcard.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] NS record in zone 'mybankcard: non-hostname content bankcard.*.foo.mybankcard.",
+      "[Info] bankcard.*.foo.mybankcard. record for 'A' is not a valid hostname.",
+      "[Warning] 'email.mybankcard|DNAME' in zone 'mybankcard' is occluded by a delegation at 'email.mybankcard'",
+      "[Warning] 'email.mybankcard|NS' in zone 'mybankcard' is occluded by a DNAME at 'email.mybankcard'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: email.mybankcard IN DNAME net.foo.mybankcard",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: email.mybankcard IN NS bankcard.*.foo.mybankcard",
+      "Checked 7 records of 'mybankcard', 2 errors, 3 warnings."
+    ]
+  }
+}

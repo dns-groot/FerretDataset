@@ -1,0 +1,43 @@
+[
+  {
+    "Query": {
+      "Name": "fnni.bar.bar.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6074",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.bar.bar.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.bar.bar.www. 500 IN NS com.bar.bar.www.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 6445",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "fnni.bar.bar.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "fnni.bar.bar.www. 500 IN NS com.bar.bar.www.",
+          ";ADDITIONAL",
+          "com.bar.bar.www. 500 IN A 1.1.1.1",
+          "com.bar.bar.www. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

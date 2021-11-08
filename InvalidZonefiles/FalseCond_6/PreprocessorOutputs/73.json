@@ -1,0 +1,39 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "73.txt:2: using RFC1035 TTL semantics",
+      "73.txt:4: warning: ownername 'bar.*.campus' contains an non-terminal wildcard",
+      "zone campus/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone campus. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bar.com.email.campus.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Info] bar.*.campus. record for 'A' is not a valid hostname.",
+      "[Warning] NS record in zone 'campus: non-hostname content bar.*.campus.",
+      "[Warning] 'bar.com.email.campus|DNAME' in zone 'campus' is occluded by a delegation at 'bar.com.email.campus'",
+      "[Warning] 'bar.com.email.campus|NS' in zone 'campus' is occluded by a DNAME at 'bar.com.email.campus'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.com.email.campus IN DNAME bank.*.campus",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.com.email.campus IN NS bar.*.campus",
+      "Checked 8 records of 'campus', 2 errors, 3 warnings."
+    ]
+  }
+}

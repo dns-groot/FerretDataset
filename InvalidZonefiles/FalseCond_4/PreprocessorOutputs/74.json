@@ -1,0 +1,35 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "74.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 74.txt:3: fnni.mybankcard: CNAME and other data",
+      "zone mybankcard/IN: loading from master file 74.txt failed: CNAME and other data",
+      "zone mybankcard/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone mybankcard. file 74.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[fnni.mybankcard.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME fnni.mybankcard found, but other records with same label exist.",
+      "[Warning] 'fnni.mybankcard|CNAME' in zone 'mybankcard' is occluded by a DNAME at 'fnni.mybankcard'",
+      "Checked 4 records of 'mybankcard', 1 errors, 1 warnings."
+    ]
+  }
+}

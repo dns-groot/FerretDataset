@@ -1,0 +1,42 @@
+[
+  {
+    "Query": {
+      "Name": "bar.email.bank.fnni.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36406",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.email.bank.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.bank.fnni. 500 IN NS *.bank.fnni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 48165",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.email.bank.fnni. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email.bank.fnni. 500 IN NS *.bank.fnni.",
+          ";ADDITIONAL",
+          "*.bank.fnni. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

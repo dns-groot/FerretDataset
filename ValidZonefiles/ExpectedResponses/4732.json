@@ -1,0 +1,27 @@
+[
+  {
+    "Query": {
+      "Name": "foo.com.example.example.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 52346",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.com.example.example. IN NS",
+          ";ANSWER",
+          "example.example. 500 IN DNAME foo.*.email.example.",
+          "foo.com.example.example. 500 IN CNAME foo.com.foo.*.email.example.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "D1"
+  }
+]

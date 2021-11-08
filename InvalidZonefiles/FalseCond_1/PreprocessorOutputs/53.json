@@ -1,0 +1,31 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "53.txt:2: using RFC1035 TTL semantics",
+      "zone foo.bank.net/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone foo.bank.net. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Duplicate record found in rrset: 'foo.bank.net IN NS example.bank.net'",
+      "[Warning] NS record in zone 'foo.bank.net: non-hostname content *.uni.bank.uni.",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.foo.bank.net IN NS *.uni.bank.uni",
+      "Checked 4 records of 'foo.bank.net', 2 errors, 1 warnings."
+    ]
+  }
+}

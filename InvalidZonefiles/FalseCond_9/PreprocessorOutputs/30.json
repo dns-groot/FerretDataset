@@ -1,0 +1,33 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "30.txt:2: using RFC1035 TTL semantics",
+      "zone mybankcard/IN: uni.mybankcard/NS 'mybankcard' has no address records (A or AAAA)",
+      "zone mybankcard/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone mybankcard. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[uni.mybankcard.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: uni.mybankcard IN NS mybankcard",
+      "Checked 3 records of 'mybankcard', 1 errors, 0 warnings."
+    ]
+  }
+}

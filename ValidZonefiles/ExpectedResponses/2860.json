@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "www.com.bar.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 13143",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.com.bar. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "com.bar. 500 IN NS com.net.",
+          "com.bar. 500 IN NS *.com.bar.",
+          ";ADDITIONAL",
+          "*.com.bar. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

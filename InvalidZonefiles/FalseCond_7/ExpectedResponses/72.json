@@ -1,0 +1,3450 @@
+[
+  {
+    "Query": {
+      "Name": "example.uni.net.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20853",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.net.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16312",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.www. IN A",
+          ";ANSWER",
+          "example.uni.net.www. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.net.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19446",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.net.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13994",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.net.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19649",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.net.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 8819",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.net.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44047",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 54457",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.net.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 39482",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.net.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14775",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.net.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23635",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.net.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39796",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.net.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.net.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 63304",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.net.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 18738",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.net.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.net.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61420",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.net.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33293",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.net.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.net.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5461",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.net.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 39262",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.net.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.net.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 4709",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.net.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 55935",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.net.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.net.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 61277",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.net.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3633",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.net.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.net.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44336",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.net.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35484",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.net.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.net.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44227",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.net.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 35654",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.net.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.net.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7310",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.net.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30554",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.net.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.net.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2009",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.net.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20854",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.net.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.net.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51538",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.net.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48488",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.net.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.net.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51834",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.net.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3662",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.net.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.net.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47355",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.net.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12636",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.net.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.net.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32274",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.net.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 144",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.net.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.net.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 35748",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.net.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 40656",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.net.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.net.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 52968",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.net.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 50709",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.net.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.net.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30491",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.net.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20953",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.net.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.net.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 46591",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.net.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 64115",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.net.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.net.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 9987",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.net.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 58759",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.net.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 13916",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "net.www. 500 IN CNAME net.net.www.",
+          "net.net.www. 500 IN CNAME net.net.net.www.",
+          "net.net.net.www. 500 IN CNAME net.net.net.net.www.",
+          "net.net.net.net.www. 500 IN CNAME net.net.net.net.net.www.",
+          "net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 9341",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 63046",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "net.www. 500 IN CNAME net.net.www.",
+          "net.net.www. 500 IN CNAME net.net.net.www.",
+          "net.net.net.www. 500 IN CNAME net.net.net.net.www.",
+          "net.net.net.net.www. 500 IN CNAME net.net.net.net.net.www.",
+          "net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 37375",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 47352",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "net.www. 500 IN CNAME net.net.www.",
+          "net.net.www. 500 IN CNAME net.net.net.www.",
+          "net.net.net.www. 500 IN CNAME net.net.net.net.www.",
+          "net.net.net.net.www. 500 IN CNAME net.net.net.net.net.www.",
+          "net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 7211",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34808",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "net.www. 500 IN CNAME net.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 3740",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 17353",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "net.www. 500 IN CNAME net.net.www.",
+          "net.net.www. 500 IN CNAME net.net.net.www.",
+          "net.net.net.www. 500 IN CNAME net.net.net.net.www.",
+          "net.net.net.net.www. 500 IN CNAME net.net.net.net.net.www.",
+          "net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 48165",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "net.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6689",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "net.www. 500 IN CNAME net.net.www.",
+          "net.net.www. 500 IN CNAME net.net.net.www.",
+          "net.net.net.www. 500 IN CNAME net.net.net.net.www.",
+          "net.net.net.net.www. 500 IN CNAME net.net.net.net.net.www.",
+          "net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          "net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 14600",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "net.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58633",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.net.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25027",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 59357",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.net.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 25450",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 35371",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.net.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 30051",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 31806",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 28529",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 10054",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.net.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63808",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.net.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36148",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.net.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33608",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.net.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 40703",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 27042",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "example.uni.net.www. 500 IN A 1.1.1.1",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 17457",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 43361",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 19838",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16059",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.www. IN SOA",
+          ";ANSWER",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "www. 500 IN DNAME net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 24464",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20115",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 51912",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.www. IN DNAME",
+          ";ANSWER",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "www. 500 IN DNAME net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "example.uni.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 16745",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "example.uni.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "example.uni.net.www. 500 IN CNAME example.uni.net.net.www.",
+          "example.uni.net.net.www. 500 IN CNAME example.uni.net.net.net.www.",
+          "example.uni.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.www.",
+          "example.uni.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.www.",
+          "example.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME example.uni.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56501",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "example.uni.www. IN TXT",
+          ";ANSWER",
+          "example.uni.www. 500 IN CNAME example.uni.net.www.",
+          "www. 500 IN DNAME net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 64266",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.www. 500 IN CNAME a.example.uni.net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 23761",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 36703",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.www. 500 IN CNAME a.example.uni.net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 45062",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45832",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.www. 500 IN CNAME a.example.uni.net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 20668",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 1374",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.www. 500 IN CNAME a.example.uni.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 1597",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23731",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.www. 500 IN CNAME a.example.uni.net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 52192",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.example.uni.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 31236",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.example.uni.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.example.uni.www. 500 IN CNAME a.example.uni.net.www.",
+          "a.example.uni.net.www. 500 IN CNAME a.example.uni.net.net.www.",
+          "a.example.uni.net.net.www. 500 IN CNAME a.example.uni.net.net.net.www.",
+          "a.example.uni.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.www.",
+          "a.example.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.example.uni.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 10775",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.example.uni.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 2415",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44036",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.www. IN A",
+          ";ANSWER",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          "www. 500 IN DNAME net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14044",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 38196",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.www. IN NS",
+          ";ANSWER",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          "www. 500 IN DNAME net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 24939",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 36870",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.www. IN SOA",
+          ";ANSWER",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          "www. 500 IN DNAME net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 22789",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30165",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 44736",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "uni.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55310",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "uni.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          "uni.net.www. 500 IN CNAME uni.net.net.www.",
+          "uni.net.net.www. 500 IN CNAME uni.net.net.net.www.",
+          "uni.net.net.net.www. 500 IN CNAME uni.net.net.net.net.www.",
+          "uni.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.www.",
+          "uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 13082",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "uni.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "uni.www. 500 IN CNAME uni.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 51267",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.www. 500 IN CNAME a.uni.net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 24817",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 14680",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.www. 500 IN CNAME a.uni.net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 17003",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 3030",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.www. 500 IN CNAME a.uni.net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56100",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30613",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.www. 500 IN CNAME a.uni.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 29047",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21506",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.www. 500 IN CNAME a.uni.net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 63514",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.uni.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 24037",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.uni.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.uni.www. 500 IN CNAME a.uni.net.www.",
+          "a.uni.net.www. 500 IN CNAME a.uni.net.net.www.",
+          "a.uni.net.net.www. 500 IN CNAME a.uni.net.net.net.www.",
+          "a.uni.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.www.",
+          "a.uni.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.www.",
+          "a.uni.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.uni.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 56992",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.uni.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 42681",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 62183",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 15667",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 46294",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 34526",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 2247",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28798",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 33201",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21725",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 158",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5806",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 16519",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 18380",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 26588",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN NS",
+          ";ANSWER",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 1589",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 6114",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 27317",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind powerdns ",
+        "Response": [
+          "id 25690",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "www. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20706",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN A",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 34588",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 18415",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN NS",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 17875",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN NS",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 55588",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN SOA",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 21137",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 30321",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN CNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          ";AUTHORITY",
+          "www. 500 IN NS ns1.outside.edu.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 12984",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29486",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN DNAME",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 22258",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.www.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20251",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.www. IN TXT",
+          ";ANSWER",
+          "www. 500 IN DNAME net.www.",
+          "a.www. 500 IN CNAME a.net.www.",
+          "a.net.www. 500 IN CNAME a.net.net.www.",
+          "a.net.net.www. 500 IN CNAME a.net.net.net.www.",
+          "a.net.net.net.www. 500 IN CNAME a.net.net.net.net.www.",
+          "a.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.www.",
+          "a.net.net.net.net.net.net.net.net.net.net.www. 500 IN CNAME a.net.net.net.net.net.net.net.net.net.net.net.www.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "powerdns ",
+        "Response": [
+          "id 27511",
+          "opcode QUERY",
+          "rcode SERVFAIL",
+          "flags QR AA",
+          ";QUESTION",
+          "a.www. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]

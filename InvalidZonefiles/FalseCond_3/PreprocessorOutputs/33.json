@@ -1,0 +1,35 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "33.txt:2: warning: ownername 'example.bank.*.bar' contains an non-terminal wildcard",
+      "33.txt:2: ignoring out-of-zone data (example.bank.*.bar)",
+      "33.txt:3: ignoring out-of-zone data (example.bank.*.bar)",
+      "33.txt:4: ignoring out-of-zone data (www)",
+      "33.txt:5: using RFC1035 TTL semantics",
+      "zone example.bar/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone example.bar. file 33.txt has 3 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 0,
+    "Output": [
+      "warning: [example.bar.] zone loader, ignoring out-of-zone data, owner example.bank.*.bar.",
+      "warning: [example.bar.] zone loader, ignoring out-of-zone data, owner example.bank.*.bar.",
+      "warning: [example.bar.] zone loader, ignoring out-of-zone data, owner www.",
+      "No semantic error found"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      ""
+    ]
+  }
+}

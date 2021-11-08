@@ -1,0 +1,29 @@
+[
+  {
+    "Query": {
+      "Name": "email.bank.bankcard.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 21479",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email.bank.bankcard. IN SOA",
+          ";ANSWER",
+          "email.bank.bankcard. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 604800 86400 2419200 604800",
+          ";AUTHORITY",
+          "email.bank.bankcard. 500 IN NS email.bank.fnni.",
+          "email.bank.bankcard. 500 IN NS fnni.bankcard.bar.fnni.",
+          "email.bank.bankcard. 500 IN NS com.foo.bank.fnni.",
+          ";ADDITIONAL"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E1"
+  }
+]

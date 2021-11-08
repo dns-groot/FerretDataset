@@ -1,0 +1,35 @@
+{
+  "Bind": {
+    "Code": 1,
+    "Output": [
+      "15.txt:2: using RFC1035 TTL semantics",
+      "dns_master_load: 15.txt:3: bank.mybankcard: CNAME and other data",
+      "dns_master_load: 15.txt:3: bank.mybankcard: CNAME and other data",
+      "zone bank.mybankcard/IN: loading from master file 15.txt failed: CNAME and other data",
+      "zone bank.mybankcard/IN: not loaded due to errors."
+    ]
+  },
+  "Nsd": {
+    "Code": 1,
+    "Output": [
+      "zone bank.mybankcard. file 15.txt has 2 errors"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bank.mybankcard.] more records exist at CNAME",
+      "",
+      "Error summary:",
+      "   1\tmore records exist at CNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Error] CNAME bank.mybankcard found, but other records with same label exist.",
+      "Checked 3 records of 'bank.mybankcard', 1 errors, 0 warnings."
+    ]
+  }
+}

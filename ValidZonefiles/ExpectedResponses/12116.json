@@ -1,0 +1,28 @@
+[
+  {
+    "Query": {
+      "Name": "bar.example.campus.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot powerdns ",
+        "Response": [
+          "id 30235",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "bar.example.campus. IN SOA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "bar.example.campus. 500 IN NS mybankcard.campus.",
+          "bar.example.campus. 500 IN NS campus.bar.example.campus.",
+          ";ADDITIONAL",
+          "campus.bar.example.campus. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

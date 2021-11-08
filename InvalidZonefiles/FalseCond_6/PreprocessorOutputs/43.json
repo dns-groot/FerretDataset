@@ -1,0 +1,36 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "43.txt:2: using RFC1035 TTL semantics",
+      "zone mybankcard/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone mybankcard. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.email.bankcard.mybankcard.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] 'net.email.bankcard.mybankcard|DNAME' in zone 'mybankcard' is occluded by a delegation at 'net.email.bankcard.mybankcard'",
+      "[Warning] 'net.email.bankcard.mybankcard|NS' in zone 'mybankcard' is occluded by a DNAME at 'net.email.bankcard.mybankcard'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.email.bankcard.mybankcard IN DNAME bankcard.mybankcard",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.email.bankcard.mybankcard IN NS email.bankcard.foo",
+      "Checked 7 records of 'mybankcard', 2 errors, 2 warnings."
+    ]
+  }
+}

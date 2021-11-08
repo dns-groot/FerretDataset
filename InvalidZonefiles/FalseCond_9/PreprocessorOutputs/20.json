@@ -1,0 +1,35 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "20.txt:2: using RFC1035 TTL semantics",
+      "20.txt:3: warning: ownername 'www.*.mybankcard.foo' contains an non-terminal wildcard",
+      "zone foo/IN: net.example.mybankcard.foo/NS 'email.foo' has no address records (A or AAAA)",
+      "zone foo/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone foo. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[net.example.mybankcard.foo.] missing glue record",
+      "",
+      "Error summary:",
+      "   1\tmissing glue record"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Info] www.*.mybankcard.foo. record for 'AAAA' is not a valid hostname.",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: net.example.mybankcard.foo IN NS email.foo",
+      "Checked 7 records of 'foo', 1 errors, 0 warnings."
+    ]
+  }
+}

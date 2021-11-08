@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "foo.foo.net.foo.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 7413",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.foo.net.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.foo.net.foo. 500 IN NS foo.net.foo.",
+          "foo.foo.net.foo. 500 IN NS foo.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 64452",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "foo.foo.net.foo. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "foo.foo.net.foo. 500 IN NS foo.",
+          "foo.foo.net.foo. 500 IN NS foo.net.foo.",
+          ";ADDITIONAL",
+          "foo.net.foo. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

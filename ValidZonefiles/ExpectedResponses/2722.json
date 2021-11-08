@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "net.uni.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29951",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.uni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.uni. 500 IN NS mybankcard.net.bank.",
+          "net.uni. 500 IN NS com.uni.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 184",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "net.uni. IN DNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "net.uni. 500 IN NS mybankcard.net.bank.",
+          "net.uni. 500 IN NS com.uni.",
+          ";ADDITIONAL",
+          "com.uni. 500 IN AAAA 2400:cb00:2049:1::a29f:1804"
+        ]
+      }
+    ],
+    "ZenResponseTag": "E4"
+  }
+]

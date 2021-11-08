@@ -1,0 +1,44 @@
+[
+  {
+    "Query": {
+      "Name": "www.uni.net.com.",
+      "Type": "AAAA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23334",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.uni.net.com. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.net.com. 500 IN NS uni.net.mybankcard.",
+          "uni.net.com. 500 IN NS net.com.",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd knot powerdns ",
+        "Response": [
+          "id 48293",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR",
+          ";QUESTION",
+          "www.uni.net.com. IN AAAA",
+          ";ANSWER",
+          ";AUTHORITY",
+          "uni.net.com. 500 IN NS uni.net.mybankcard.",
+          "uni.net.com. 500 IN NS net.com.",
+          ";ADDITIONAL",
+          "net.com. 500 IN A 1.1.1.1"
+        ]
+      }
+    ],
+    "ZenResponseTag": "R1"
+  }
+]

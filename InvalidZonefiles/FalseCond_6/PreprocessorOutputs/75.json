@@ -1,0 +1,37 @@
+{
+  "Bind": {
+    "Code": 0,
+    "Output": [
+      "75.txt:2: using RFC1035 TTL semantics",
+      "zone example.foo.mybankcard/IN: loaded serial 3",
+      "OK"
+    ]
+  },
+  "Nsd": {
+    "Code": 0,
+    "Output": [
+      "zone example.foo.mybankcard. is ok"
+    ]
+  },
+  "Knot": {
+    "Code": 1,
+    "Output": [
+      "[bar.example.foo.mybankcard.] NS record exists at DNAME",
+      "",
+      "Error summary:",
+      "   1\tNS record exists at DNAME",
+      "Serious semantic error detected"
+    ]
+  },
+  "Powerdns": {
+    "Code": 1,
+    "Output": [
+      "[Warning] NS record in zone 'example.foo.mybankcard: non-hostname content foo.*.foo.mybankcard.",
+      "[Warning] 'bar.example.foo.mybankcard|DNAME' in zone 'example.foo.mybankcard' is occluded by a delegation at 'bar.example.foo.mybankcard'",
+      "[Warning] 'bar.example.foo.mybankcard|NS' in zone 'example.foo.mybankcard' is occluded by a DNAME at 'bar.example.foo.mybankcard'",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.example.foo.mybankcard IN DNAME example.foo.mybankcard",
+      "[Error] Following record is auth=0, run pdnsutil rectify-zone?: bar.example.foo.mybankcard IN NS foo.www",
+      "Checked 4 records of 'example.foo.mybankcard', 2 errors, 3 warnings."
+    ]
+  }
+}

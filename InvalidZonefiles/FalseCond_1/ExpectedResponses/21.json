@@ -1,0 +1,1652 @@
+[
+  {
+    "Query": {
+      "Name": "foo.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 56779",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "foo.email. 500 IN CNAME foo.foo.email.",
+          "foo.foo.email. 500 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 7521",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN A",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 48144",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN A",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          "foo.foo.email. 3600 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58767",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "foo.email. 500 IN CNAME foo.foo.email.",
+          "foo.foo.email. 500 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 15754",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN NS",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 30489",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN NS",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          "foo.foo.email. 3600 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 20541",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "foo.email. 500 IN CNAME foo.foo.email.",
+          "foo.foo.email. 500 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 41236",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN SOA",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 13617",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN SOA",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          "foo.foo.email. 3600 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 49961",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "foo.email. 500 IN CNAME foo.foo.email.",
+          ";AUTHORITY",
+          "email. 500 IN NS com.fnni.foo.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58358",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "foo.email. 500 IN CNAME foo.foo.email.",
+          "foo.foo.email. 500 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 42800",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN DNAME",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 7948",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN DNAME",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          "foo.foo.email. 3600 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "foo.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 62007",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "foo.email. 500 IN CNAME foo.foo.email.",
+          "foo.foo.email. 500 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 24991",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN TXT",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 41511",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "foo.email. IN TXT",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "foo.email. 3600 IN CNAME foo.foo.email.",
+          "foo.foo.email. 3600 IN CNAME foo.foo.foo.email.",
+          "foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.email.",
+          "foo.foo.foo.foo.foo.email. 3600 IN CNAME foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 54597",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 5452",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN A",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 64960",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN A",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 6451",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 51642",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN NS",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 39640",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN NS",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32104",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 63773",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN SOA",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 62788",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN SOA",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 60924",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          ";AUTHORITY",
+          "email. 500 IN NS com.fnni.foo.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 58525",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 58221",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN DNAME",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 60114",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN DNAME",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.foo.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 25923",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.foo.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 52356",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN TXT",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 18458",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.foo.email. IN TXT",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 28354",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 16803",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN A",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 42553",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN A",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 29466",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 5294",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN NS",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 62171",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN NS",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 44443",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 8821",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN SOA",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 64854",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN SOA",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 59666",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          "email. 500 IN NS com.fnni.foo.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 23331",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 41370",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN DNAME",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 34588",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN DNAME",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 12065",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 21871",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN TXT",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 21282",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN TXT",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 42978",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN A",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 27073",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN NS",
+          ";ANSWER",
+          "email. 500 IN NS com.fnni.foo.com.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 12802",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";AUTHORITY",
+          "email. 500 IN NS com.fnni.foo.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 16539",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN CNAME",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 49005",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          ";AUTHORITY",
+          "email. 500 IN NS com.fnni.foo.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 55918",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "email. IN TXT",
+          ";ANSWER",
+          ";AUTHORITY",
+          "email. 500 IN SOA ns1.outside.edu. root.campus.edu. 3 6048 86400 2419200 6048",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "A"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 45573",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN A",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 28806",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN A",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 14175",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN A",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "NS"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 53373",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN NS",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 2287",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN NS",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 45298",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN NS",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "SOA"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 21160",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN SOA",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 41334",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN SOA",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 25613",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN SOA",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "CNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind nsd knot ",
+        "Response": [
+          "id 24187",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN CNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          "email. 500 IN NS com.fnni.foo.com.",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "DNAME"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 32068",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN DNAME",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 63396",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN DNAME",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 52540",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN DNAME",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  },
+  {
+    "Query": {
+      "Name": "a.email.",
+      "Type": "TXT"
+    },
+    "Expected Response": [
+      {
+        "Server/s": "bind ",
+        "Response": [
+          "id 5059",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA TC",
+          ";QUESTION",
+          "a.email. IN TXT",
+          ";ANSWER",
+          "email. 500 IN DNAME foo.email.",
+          "a.email. 500 IN CNAME a.foo.email.",
+          "a.foo.email. 500 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 500 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.foo.foo.foo.foo.foo.email. 500 IN CNAME a.foo.foo.foo.foo.foo.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "nsd ",
+        "Response": [
+          "id 48313",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN TXT",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      },
+      {
+        "Server/s": "knot ",
+        "Response": [
+          "id 41311",
+          "opcode QUERY",
+          "rcode NOERROR",
+          "flags QR AA",
+          ";QUESTION",
+          "a.email. IN TXT",
+          ";ANSWER",
+          "email. 3600 IN DNAME foo.email.",
+          "a.email. 3600 IN CNAME a.foo.email.",
+          "a.foo.email. 3600 IN CNAME a.foo.foo.email.",
+          "a.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.email.",
+          "a.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.email.",
+          "a.foo.foo.foo.foo.email. 3600 IN CNAME a.foo.foo.foo.foo.foo.email.",
+          ";AUTHORITY",
+          ";ADDITIONAL"
+        ]
+      }
+    ]
+  }
+]
