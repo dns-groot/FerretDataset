@@ -58,7 +58,7 @@ The corresponding zone file and query file are named with the same name but with
 
 ### Invalid Zone File Tests
 
-While testing with valid zone files is critical, bugs can also lurk in implementations' handling of ill-formed zones. Ferret also generated zone files that violated one of the zone validity conditions systematically, and to test using such zone files, leveraged [GRoot](https://github.com/dns-groot/groot) to generate queries. We formulated [9 zone validity conditions](https://github.com/dns-groot/Ferret/tree/main/TestGenerator#invalid-zone-file-tests) and, as such, Ferret developed zone files with one of them violated, but the other eight were satisfied.
+While testing with valid zone files is critical, bugs can also lurk in implementations' handling of ill-formed zones. Ferret also generated zone files that violated one of the zone validity conditions systematically, and to test using such zone files, leveraged [GRoot](https://github.com/dns-groot/groot) to generate queries. We formulated [9 zone semantic validity conditions](https://github.com/dns-groot/Ferret/tree/main/TestGenerator#invalid-zone-file-tests) and Ferret generated 100 zone files with one of them violated, but the other eight satisfied.
 
 [`InvalidZoneFileTests/FalseCond_1`](InvalidZoneFileTests/FalseCond_1) directory contains all the info related to the tests where the zone files in those tests violate validity condition one, but all the other conditions are satisfied. The subdirectories in it are:
 
